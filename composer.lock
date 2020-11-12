@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "857e7e98a538e270a607ec3f26a2571c",
+    "content-hash": "7af1efceed04180d0d926bec2c260fc0",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -21,16 +21,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.160.0",
+            "version": "3.161.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5f1be65b657a53d79f585e2df8c996931b1b01b1"
+                "reference": "93f237f55463035896dbe298c9100b2438a87193"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5f1be65b657a53d79f585e2df8c996931b1b01b1",
-                "reference": "5f1be65b657a53d79f585e2df8c996931b1b01b1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/93f237f55463035896dbe298c9100b2438a87193",
+                "reference": "93f237f55463035896dbe298c9100b2438a87193",
                 "shasum": ""
             },
             "require": {
@@ -105,9 +105,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.160.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.161.0"
             },
-            "time": "2020-11-11T19:16:21+00:00"
+            "time": "2020-11-12T19:25:24+00:00"
         },
         {
             "name": "composer/installers",
@@ -1587,12 +1587,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "e440567339d5fe93d9525e377c5e686b0b08bcca"
+                "reference": "739cebd6c58ef0ea1fc52e03fb3be4f3726be346"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/e440567339d5fe93d9525e377c5e686b0b08bcca",
-                "reference": "e440567339d5fe93d9525e377c5e686b0b08bcca",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/739cebd6c58ef0ea1fc52e03fb3be4f3726be346",
+                "reference": "739cebd6c58ef0ea1fc52e03fb3be4f3726be346",
                 "shasum": ""
             },
             "conflict": {
@@ -1727,6 +1727,7 @@
                 "phpwhois/phpwhois": "<=4.2.5",
                 "phpxmlrpc/extras": "<0.6.1",
                 "pimcore/pimcore": "<6.3",
+                "pocketmine/pocketmine-mp": "<3.15.4",
                 "prestashop/autoupgrade": ">=4,<4.10.1",
                 "prestashop/contactform": ">1.0.1,<4.3",
                 "prestashop/gamification": "<2.3.2",
@@ -1894,7 +1895,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-07T16:07:08+00:00"
+            "time": "2020-11-11T22:01:54+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
