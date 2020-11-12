@@ -1,0 +1,24 @@
+/* Print Style Sheet */
+@media print {
+	body { background:white; color:black; margin:0 }
+	#header { display:block;  }
+	#bottommenucontainer { display:none;   }
+#tools { display:none;   }
+	#main { display:block; width: 100%; }
+	#body {width: 100%;}
+	#comments { display:none; }
+	#sidebar {  display:none; width: 0px;  }
+	#footer { display:none;   }
+    
+    
+    
+    
+    
+    .listings-all-top{
+        display: none;
+    }
+    #vulture728x90{
+        visibility: hidden;
+    }
+	}
+}

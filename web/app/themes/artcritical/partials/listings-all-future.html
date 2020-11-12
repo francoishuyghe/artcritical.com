@@ -1,0 +1,316 @@
+<?php
+function bigAreaName($numero) {
+            if ($numero < "20" && $numero >= "10") {
+                    return "Tribeca";
+            } elseif ($numero < "30" && $numero >= "20") {
+                    return "Lower East Side";
+            } elseif ($numero < "60" && $numero >= "30") {
+                    return "Soho & Noho & East Village";
+            } elseif ($numero < "170" && $numero >= "60") {
+                    return "West Village & Chelsea";
+            } elseif ($numero < "220" && $numero >= "170") {
+                    return "Midtown & Uptown & Harlem";
+            } elseif ($numero < "270" && $numero >= "220") {
+                    return "Brooklyn";
+            } elseif ($numero < "300" && $numero >= "270") {
+                    return "Queens & Bronx & Staten Island";
+            } elseif ($numero < "310" && $numero >= "300") {
+                    return "Long Island";
+            } elseif ($numero < "320" && $numero >= "310") {
+                    return "Upstate New York";
+            } elseif ($numero < "330" && $numero >= "320") {
+                    return "New Jersey";
+            } elseif ($numero < "370" && $numero >= "330") {
+                    return "Philadelphia";
+            } else {
+                return "";
+            }
+            }
+
+function cityName($numero) {
+            if ($numero < "220" && $numero >= "10") {
+                    return "New York, NY";
+            } elseif ($numero < "270" && $numero >= "220") {
+                    return "Brooklyn, NY";
+            } elseif ($numero < "280" && $numero >= "270") {
+                    return "Queens, NY";
+            } elseif ($numero < "290" && $numero >= "280") {
+                    return "The Bronx, NY";
+            } elseif ($numero < "300" && $numero >= "290") {
+                    return "Staten Island, NY";
+            } elseif ($numero < "370" && $numero >= "330") {
+                    return "Philadelphia, PA";
+            } else {
+                return "";
+            }
+            }
+
+function areaName($numero) {
+            if ($numero < "20" && $numero >= "10") {
+                    return "Tribeca and below";
+            } elseif ($numero < "30" && $numero >= "20") {
+                    return "Lower East Side";
+            } elseif ($numero < "40" && $numero >= "30") {
+                    return "Soho";
+            } elseif ($numero < "60" && $numero >= "40") {
+                    return "Noho/East Village";
+            } elseif ($numero < "70" && $numero >= "60") {
+                    return "West Village";
+            } elseif ($numero < "80" && $numero >= "70") {
+                    return "19th St and below";
+            } elseif ($numero < "90" && $numero >= "80") {
+                    return "20th St and nearby";
+            } elseif ($numero < "100" && $numero >= "90") {
+                    return "21st St and nearby";
+            } elseif ($numero < "110" && $numero >= "100") {
+                    return "22nd St and nearby";
+            } elseif ($numero < "120" && $numero >= "110") {
+                    return "23rd St and nearby";
+            } elseif ($numero < "130" && $numero >= "120") {
+                    return "24th St and nearby";
+            } elseif ($numero < "140" && $numero >= "130") {
+                    return "25th St and nearby";
+            } elseif ($numero < "150" && $numero >= "140") {
+                    return "26th St and nearby";
+            } elseif ($numero < "160" && $numero >= "150") {
+                    return "27th St and above";
+            } elseif ($numero < "170" && $numero >= "160") {
+                    return "Flatiron/Gramercy Park";
+            } elseif ($numero < "180" && $numero >= "170") {
+                    return "Midtown";
+            } elseif ($numero < "190" && $numero >= "180") {
+                    return "57th Street and nearby";
+            } elseif ($numero < "200" && $numero >= "190") {
+                    return "Upper East Side";
+            } elseif ($numero < "210" && $numero >= "200") {
+                    return "Upper West Side";
+            } elseif ($numero < "220" && $numero >= "210") {
+                    return "Harlem";
+            } elseif ($numero < "230" && $numero >= "220") {
+                    return "Brooklyn South";
+            } elseif ($numero < "235" && $numero >= "230") {
+                    return "Dumbo/Downtown";
+            } elseif ($numero < "240" && $numero >= "235") {
+                    return "Fort Greene";
+            } elseif ($numero < "250" && $numero >= "240") {
+                    return "Bushwick/Bed-stuy";
+            } elseif ($numero < "260" && $numero >= "250") {
+                    return "Williamsburg / Greenpoint";
+            } elseif ($numero < "270" && $numero >= "260") {
+                    return "Brooklyn (Other)";
+            } elseif ($numero < "272" && $numero >= "270") {
+                    return "Ridgewood";
+            } elseif ($numero < "274" && $numero >= "272") {
+                    return "Long Island City/Astoria";
+            } elseif ($numero < "280" && $numero >= "274") {
+                    return "Queens (Other)";
+            } elseif ($numero < "290" && $numero >= "280") {
+                    return "The Bronx";
+            } elseif ($numero < "300" && $numero >= "290") {
+                    return "Staten Island";
+            } elseif ($numero < "310" && $numero >= "300") {
+                    return "Long Island";
+            } elseif ($numero < "320" && $numero >= "310") {
+                    return "Upstate New York";
+            } elseif ($numero < "330" && $numero >= "320") {
+                    return "New Jersey";
+            } elseif ($numero < "340" && $numero >= "330") {
+                    return "Philadelphia";
+            } elseif ($numero < "350" && $numero >= "340") {
+                    return "Old City";
+             } elseif ($numero < "360" && $numero >= "350") {
+                    return "West Philadelphia";
+             } elseif ($numero < "370" && $numero >= "360") {
+                    return "North Philadelphia";
+            } else {
+                    return "Other";
+            }
+            }
+
+
+?>
+
+<?php
+
+            $query = "SELECT `wp_posts`.`post_title` , `wp_posts`.`ID` , `end`.`meta_value` AS `enddate` , `start`.`meta_value` as `startdate`, `quartier`.`meta_value` AS `thequartier`, `street`.`meta_value` AS `thestreet`, `number`.`meta_value` AS `thenumber`, `block`.`meta_value` AS `theblock`
+
+            FROM `wp_posts` , `wp_postmeta` AS `end` , `wp_postmeta` AS `start` , `wp_postmeta` AS `quartier`, `wp_postmeta` AS `street`, `wp_postmeta` AS `number`, `wp_postmeta` AS `block`
+
+            WHERE `wp_posts`.`post_type` = 'listing'
+
+            AND `wp_posts`.`ID` = `end`.`post_id`
+            AND `wp_posts`.`ID` = `start`.`post_id`
+            AND `wp_posts`.`ID` = `quartier`.`post_id`
+            AND `wp_posts`.`ID` = `street`.`post_id`
+            AND `wp_posts`.`ID` = `block`.`post_id`
+            AND `wp_posts`.`ID` = `number`.`post_id`
+
+            AND `end`.`meta_key` = 'theend'
+            AND `end`.`meta_value` >= '".strtotime("today midnight")."'
+
+            AND `start`.`meta_key` = 'thestart'
+            AND `start`.`meta_value` >= '".strtotime("today midnight")."'
+
+            AND `quartier`.`meta_key` = 'quartier'
+            AND `street`.`meta_key` = 'street'
+            AND `number`.`meta_key` = 'number'
+            AND `block`.`meta_key` = 'block'
+
+            AND `wp_posts`.`post_status` = 'publish'
+
+            GROUP BY `wp_posts`.`ID`
+            ORDER BY `thequartier` + 0 ASC";
+            
+            $wpdb->query("SET SQL_BIG_SELECTS=1");
+			$calendar = $wpdb->get_results($query, ARRAY_A);
+
+            $thequartier = array();
+            $thestreet = array();
+            $theblock = array();
+            $thenumber = array();
+            
+            foreach ($calendar as $key => $row) {
+                $thequartier[$key]  = $row['thequartier'];
+                $thestreet[$key] = $row['thestreet'];
+                $theblock[$key] = $row['theblock'];
+                $thenumber[$key] = $row['thenumber'];
+            }
+
+            // Sort the data with volume descending, edition ascending
+            array_multisort($thequartier, SORT_ASC, $theblock, SORT_ASC, $thestreet, SORT_ASC, $thenumber, SORT_ASC, $calendar);
+
+                        ?>
+
+
+       
+<div class="placeholder"></div>
+		<div id="byneighborhood" class="area_list">
+        <div class="area_list-title">
+            <a href="#">
+            <img src="http://www.artcritical.com/wp-content/themes/artcritical/images/logo.png">    
+            </a>
+        </div>
+        <div class="area_list-content">
+            <ul>
+                <?php foreach($calendar as $event){ 
+                $area = get_post_meta($event['ID'], 'area', true);
+                $hood = bigAreaName($area);
+                if($hood !== $lasthood){
+                    if($hood !==""){ ?>
+                <li class="neighborhood_link"><a href="#<?php echo bigAreaName($area) ?>"><?php echo bigAreaName($area) ?></a></li>
+
+                                    <?php }
+                                        }
+                $lasthood = $hood;
+                
+                }?>
+			</ul>
+        </div>
+            <div class="area_list-extra">
+                <span class="print">
+                <a href="#" onclick="window.print();return false;">print</a>
+                </span>
+            </div>
+        </div>
+        <hr style="visibility:hidden; padding-top:70px;">
+        <div class="listings-all">
+        <div class="listings-tips">
+        <em>artcritical prides itself on having the most comprehensive visual arts listings in New York City, so if you see something (or don't), please say something: <a href="mailto:listings@artcritical.com">listings@artcritical.com</a></em>
+            </div>
+</section>
+<section class="listings-all-content">
+			
+<div><div><div>
+    
+			<?php
+                $lastarea = 42;
+                foreach($calendar as $event){ 
+				$thevenue = get_post_meta($event['ID'], 'thevenue', true);
+                $oneoff = get_post_meta($event['ID'], 'oneoff', true);
+                if( $oneoff == 'on' ){
+                    $area = get_post_meta($event['ID'], 'quartier', true);
+                    $venue = get_post_meta($event['ID'], 'thevenuename', true);
+                    $address = get_post_meta($event['ID'], 'address', true);
+                    $address2 = get_post_meta($event['ID'], 'address2', true);
+                    $city = get_post_meta($event['ID'], 'city', true);
+                    $state = get_post_meta($event['ID'], 'state', true);
+                    $phone = get_post_meta($event['ID'], 'phone', true);
+                    $website = get_post_meta($event['ID'], 'thewebsite', true);
+                    $directlink = get_post_meta($event['ID'], 'direct_link', true);
+                }else{
+                    $area = get_post_meta($thevenue, 'quartier', true);
+                    $venue = get_the_title($thevenue);
+                    $address = get_post_meta($thevenue, 'address', true);
+                    $address2 = get_post_meta($thevenue, 'address2', true);
+                    $city = get_post_meta($thevenue, 'city', true);
+                    $state = get_post_meta($thevenue, 'state', true);
+                    $phone = get_post_meta($thevenue, 'phone', true);
+                    $website = get_post_meta($thevenue, 'thewebsite', true);
+                    $directlink = get_post_meta($thevenue, 'direct_link', true);
+                }
+				$notes = get_post_meta($event['ID'], 'notes', true);
+				$title = get_the_title($event['ID']);
+                $webstart = substr($website, 0, 7);
+                if ( $webstart != 'http://'){
+                $website = 'http://'.$website;
+                }
+                $review = get_post_meta($event['ID'], 'review', true);
+				$opening =  date("F d", get_post_meta($event['ID'], 'thestart', true));
+				$ending = date("F d", get_post_meta($event['ID'], 'theend', true));
+                $receptionnum = get_post_meta($event['ID'], 'thereception', true);
+                if ($receptionnum){$reception = date("F d", $receptionnum );}else{$reception = $opening;}
+                $receptionnotes = get_post_meta($event['ID'], 'receptionnotes', true);
+				$directlink = get_post_meta($thevenue, 'direct_link', true);
+                $bigarea = bigAreaName($area);
+                if($opening !== $ending){
+				if($bigarea !== $lastbigarea){
+                     ?>
+                    </div>
+            </div>
+            </div>
+                    <div class="area-wrap">
+					<div class="area-title"><a class="area-anchor" name="<?php echo $bigarea ?>"></a><h1><?php echo $bigarea ?></h1></div>
+            <div class="area-content"> 
+                <div>
+                
+                <?php 
+                }
+				if(areaName($area) !== areaName($lastarea)){
+                     ?>
+                    </div>
+					<div class="hood-title"><a class="area-anchor" name="<?php echo areaName($area) ?>"></a><h1><?php echo areaName($area) ?></h1></div><div class="hood-content">
+                
+                <?php    
+				}
+				?>
+				<div class="listing">
+					<div id="title_<?php echo $event['ID']?>" class="info">
+                        <strong><?php echo $title ?> at <?php if($website !== ''){ ?><a target="_blank" href="<?php echo $website?>"><?php } ?><?php echo $venue ?><?php if($website !== ''){ ?></a><?php } ?></strong> - 
+                        <?php echo $address ?><?php if($address2){ echo " ".$address2; } ?>, <?php if ($area >= 300){ echo $city.', '.$state; }else{ echo cityName($area);} ?> <?php echo $phone ?> - <?php echo $opening ?> to <?php echo $ending ?>  <?php if (!empty($reception)){if ($reception !== $opening){ echo '- Reception: '.$reception;}} ?> <?php
+					if($review != ""){echo ' - <a href="'.$review.'" target="_blank" class="listingReview">Review</a>';}
+					?>
+					</div>
+					<?php
+                    if($notes != "" || $receptionnotes != ""){
+                                    echo '<div class="notes">';
+                                    if($receptionnotes != "" && time() < $receptionnum){echo $receptionnotes;}
+                                    if($notes != "" && $receptionnotes != ""){ echo ' / ';}
+                                    echo $notes.'</div>';
+                                        }
+					?>
+			</div>
+				<?php
+				$lastarea = $area;
+                $lastbigarea = $bigarea;
+                
+                }}
+			?>
+                        </div>
+                </div>
+                </div>
+            
+        
+			</div>
+            <a href="#"><div class="arrow-up"><span>&#65514;</span></div></a>
+
+

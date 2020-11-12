@@ -1,0 +1,671 @@
+<br />
+<font size='1'><table class='xdebug-error xe-warning' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: is_readable(): open_basedir restriction in effect. File(/home/vagrant/.aws/config) is not within the allowed path(s): (/srv/www/:/tmp) in /srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/RegionalEndpoint/ConfigurationProvider.php on line <i>131</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0006</td><td bgcolor='#eeeeec' align='right'>391616</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>393120</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-blog-header.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>6</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0014</td><td bgcolor='#eeeeec' align='right'>404288</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-load.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-blog-header.php' bgcolor='#eeeeec'>.../wp-blog-header.php<b>:</b>13</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0019</td><td bgcolor='#eeeeec' align='right'>405656</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp-config.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-load.php' bgcolor='#eeeeec'>.../wp-load.php<b>:</b>42</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0329</td><td bgcolor='#eeeeec' align='right'>1408824</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-settings.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp-config.php' bgcolor='#eeeeec'>.../wp-config.php<b>:</b>9</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22334792</td><td bgcolor='#eeeeec'>do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-settings.php' bgcolor='#eeeeec'>.../wp-settings.php<b>:</b>409</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>7</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/plugin.php' bgcolor='#eeeeec'>.../plugin.php<b>:</b>478</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>8</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->apply_filters(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>311</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>9</td><td bgcolor='#eeeeec' align='center'>0.2439</td><td bgcolor='#eeeeec' align='right'>22937536</td><td bgcolor='#eeeeec'>s3_uploads_init(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>287</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>10</td><td bgcolor='#eeeeec' align='center'>0.2487</td><td bgcolor='#eeeeec' align='right'>23233904</td><td bgcolor='#eeeeec'>S3_Uploads->setup(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/s3-uploads.php' bgcolor='#eeeeec'>.../s3-uploads.php<b>:</b>45</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>11</td><td bgcolor='#eeeeec' align='center'>0.2487</td><td bgcolor='#eeeeec' align='right'>23233904</td><td bgcolor='#eeeeec'>S3_Uploads->register_stream_wrapper(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/inc/class-s3-uploads.php' bgcolor='#eeeeec'>.../class-s3-uploads.php<b>:</b>46</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>12</td><td bgcolor='#eeeeec' align='center'>0.2499</td><td bgcolor='#eeeeec' align='right'>23352728</td><td bgcolor='#eeeeec'>S3_Uploads->s3(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/inc/class-s3-uploads.php' bgcolor='#eeeeec'>.../class-s3-uploads.php<b>:</b>76</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>13</td><td bgcolor='#eeeeec' align='center'>0.2499</td><td bgcolor='#eeeeec' align='right'>23353480</td><td bgcolor='#eeeeec'>Aws\AwsClient::factory(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/inc/class-s3-uploads.php' bgcolor='#eeeeec'>.../class-s3-uploads.php<b>:</b>198</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>14</td><td bgcolor='#eeeeec' align='center'>0.2499</td><td bgcolor='#eeeeec' align='right'>23353672</td><td bgcolor='#eeeeec'>Aws\S3\S3Client->__construct(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/AwsClient.php' bgcolor='#eeeeec'>.../AwsClient.php<b>:</b>447</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>15</td><td bgcolor='#eeeeec' align='center'>0.2519</td><td bgcolor='#eeeeec' align='right'>23462368</td><td bgcolor='#eeeeec'>Aws\S3\S3Client->__construct(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/S3Client.php' bgcolor='#eeeeec'>.../S3Client.php<b>:</b>346</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>16</td><td bgcolor='#eeeeec' align='center'>0.2550</td><td bgcolor='#eeeeec' align='right'>23921520</td><td bgcolor='#eeeeec'>Aws\ClientResolver->resolve(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/AwsClient.php' bgcolor='#eeeeec'>.../AwsClient.php<b>:</b>199</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>17</td><td bgcolor='#eeeeec' align='center'>0.2769</td><td bgcolor='#eeeeec' align='right'>27470464</td><td bgcolor='#eeeeec'>Aws\ClientResolver::_apply_endpoint_provider(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/ClientResolver.php' bgcolor='#eeeeec'>.../ClientResolver.php<b>:</b>323</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>18</td><td bgcolor='#eeeeec' align='center'>0.2774</td><td bgcolor='#eeeeec' align='right'>27477720</td><td bgcolor='#eeeeec'>Aws\Endpoint\EndpointProvider::resolve(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/ClientResolver.php' bgcolor='#eeeeec'>.../ClientResolver.php<b>:</b>552</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>19</td><td bgcolor='#eeeeec' align='center'>0.2774</td><td bgcolor='#eeeeec' align='right'>27477720</td><td bgcolor='#eeeeec'>Aws\Endpoint\Partition->__invoke(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/Endpoint/EndpointProvider.php' bgcolor='#eeeeec'>.../EndpointProvider.php<b>:</b>60</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>20</td><td bgcolor='#eeeeec' align='center'>0.2774</td><td bgcolor='#eeeeec' align='right'>27477720</td><td bgcolor='#eeeeec'>Aws\Endpoint\Partition->getEndpointData(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/Endpoint/Partition.php' bgcolor='#eeeeec'>.../Partition.php<b>:</b>132</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>21</td><td bgcolor='#eeeeec' align='center'>0.2774</td><td bgcolor='#eeeeec' align='right'>27477720</td><td bgcolor='#eeeeec'>Aws\Endpoint\Partition->resolveRegion(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/Endpoint/Partition.php' bgcolor='#eeeeec'>.../Partition.php<b>:</b>152</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>22</td><td bgcolor='#eeeeec' align='center'>0.2774</td><td bgcolor='#eeeeec' align='right'>27477720</td><td bgcolor='#eeeeec'>Aws\Endpoint\Partition->isS3LegacyEndpointUsed(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/Endpoint/Partition.php' bgcolor='#eeeeec'>.../Partition.php<b>:</b>188</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>23</td><td bgcolor='#eeeeec' align='center'>0.2774</td><td bgcolor='#eeeeec' align='right'>27477720</td><td bgcolor='#eeeeec'>Aws\S3\RegionalEndpoint\ConfigurationProvider::unwrap(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/Endpoint/Partition.php' bgcolor='#eeeeec'>.../Partition.php<b>:</b>238</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>24</td><td bgcolor='#eeeeec' align='center'>0.2818</td><td bgcolor='#eeeeec' align='right'>27600880</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->wait(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/RegionalEndpoint/ConfigurationProvider.php' bgcolor='#eeeeec'>.../ConfigurationProvider.php<b>:</b>180</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>25</td><td bgcolor='#eeeeec' align='center'>0.2818</td><td bgcolor='#eeeeec' align='right'>27600880</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->waitIfPending(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>62</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>26</td><td bgcolor='#eeeeec' align='center'>0.2818</td><td bgcolor='#eeeeec' align='right'>27600880</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->invokeWaitList(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>226</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>27</td><td bgcolor='#eeeeec' align='center'>0.2818</td><td bgcolor='#eeeeec' align='right'>27600880</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->waitIfPending(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>269</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>28</td><td bgcolor='#eeeeec' align='center'>0.2818</td><td bgcolor='#eeeeec' align='right'>27600880</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->invokeWaitFn(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>224</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>29</td><td bgcolor='#eeeeec' align='center'>0.2818</td><td bgcolor='#eeeeec' align='right'>27600880</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\TaskQueue->run(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>248</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>30</td><td bgcolor='#eeeeec' align='center'>0.2818</td><td bgcolor='#eeeeec' align='right'>27600912</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\RejectedPromise::GuzzleHttp\Promise\{closure:/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/RejectedPromise.php:38-51}(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/TaskQueue.php' bgcolor='#eeeeec'>.../TaskQueue.php<b>:</b>48</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>31</td><td bgcolor='#eeeeec' align='center'>0.2822</td><td bgcolor='#eeeeec' align='right'>27603984</td><td bgcolor='#eeeeec'>Aws\S3\RegionalEndpoint\ConfigurationProvider::Aws\S3\RegionalEndpoint\{closure:/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/RegionalEndpoint/ConfigurationProvider.php:130-149}(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/RejectedPromise.php' bgcolor='#eeeeec'>.../RejectedPromise.php<b>:</b>42</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>32</td><td bgcolor='#eeeeec' align='center'>0.2823</td><td bgcolor='#eeeeec' align='right'>27603984</td><td bgcolor='#eeeeec'><a href='http://www.php.net/function.is-readable' target='_new'>is_readable</a>
+(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/RegionalEndpoint/ConfigurationProvider.php' bgcolor='#eeeeec'>.../ConfigurationProvider.php<b>:</b>131</td></tr>
+</table></font>
+<br />
+<font size='1'><table class='xdebug-error xe-warning' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: is_readable(): open_basedir restriction in effect. File(/home/vagrant/.aws/config) is not within the allowed path(s): (/srv/www/:/tmp) in /srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/Retry/ConfigurationProvider.php on line <i>158</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0006</td><td bgcolor='#eeeeec' align='right'>391616</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>393120</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-blog-header.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>6</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0014</td><td bgcolor='#eeeeec' align='right'>404288</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-load.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-blog-header.php' bgcolor='#eeeeec'>.../wp-blog-header.php<b>:</b>13</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0019</td><td bgcolor='#eeeeec' align='right'>405656</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp-config.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-load.php' bgcolor='#eeeeec'>.../wp-load.php<b>:</b>42</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0329</td><td bgcolor='#eeeeec' align='right'>1408824</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-settings.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp-config.php' bgcolor='#eeeeec'>.../wp-config.php<b>:</b>9</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22334792</td><td bgcolor='#eeeeec'>do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-settings.php' bgcolor='#eeeeec'>.../wp-settings.php<b>:</b>409</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>7</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/plugin.php' bgcolor='#eeeeec'>.../plugin.php<b>:</b>478</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>8</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->apply_filters(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>311</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>9</td><td bgcolor='#eeeeec' align='center'>0.2439</td><td bgcolor='#eeeeec' align='right'>22937536</td><td bgcolor='#eeeeec'>s3_uploads_init(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>287</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>10</td><td bgcolor='#eeeeec' align='center'>0.2487</td><td bgcolor='#eeeeec' align='right'>23233904</td><td bgcolor='#eeeeec'>S3_Uploads->setup(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/s3-uploads.php' bgcolor='#eeeeec'>.../s3-uploads.php<b>:</b>45</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>11</td><td bgcolor='#eeeeec' align='center'>0.2487</td><td bgcolor='#eeeeec' align='right'>23233904</td><td bgcolor='#eeeeec'>S3_Uploads->register_stream_wrapper(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/inc/class-s3-uploads.php' bgcolor='#eeeeec'>.../class-s3-uploads.php<b>:</b>46</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>12</td><td bgcolor='#eeeeec' align='center'>0.2499</td><td bgcolor='#eeeeec' align='right'>23352728</td><td bgcolor='#eeeeec'>S3_Uploads->s3(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/inc/class-s3-uploads.php' bgcolor='#eeeeec'>.../class-s3-uploads.php<b>:</b>76</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>13</td><td bgcolor='#eeeeec' align='center'>0.2499</td><td bgcolor='#eeeeec' align='right'>23353480</td><td bgcolor='#eeeeec'>Aws\AwsClient::factory(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/inc/class-s3-uploads.php' bgcolor='#eeeeec'>.../class-s3-uploads.php<b>:</b>198</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>14</td><td bgcolor='#eeeeec' align='center'>0.2499</td><td bgcolor='#eeeeec' align='right'>23353672</td><td bgcolor='#eeeeec'>Aws\S3\S3Client->__construct(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/AwsClient.php' bgcolor='#eeeeec'>.../AwsClient.php<b>:</b>447</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>15</td><td bgcolor='#eeeeec' align='center'>0.2519</td><td bgcolor='#eeeeec' align='right'>23462368</td><td bgcolor='#eeeeec'>Aws\S3\S3Client->__construct(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/S3Client.php' bgcolor='#eeeeec'>.../S3Client.php<b>:</b>346</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>16</td><td bgcolor='#eeeeec' align='center'>0.2550</td><td bgcolor='#eeeeec' align='right'>23921520</td><td bgcolor='#eeeeec'>Aws\ClientResolver->resolve(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/AwsClient.php' bgcolor='#eeeeec'>.../AwsClient.php<b>:</b>199</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>17</td><td bgcolor='#eeeeec' align='center'>0.2949</td><td bgcolor='#eeeeec' align='right'>28108864</td><td bgcolor='#eeeeec'>Aws\S3\S3Client::_applyRetryConfig(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/ClientResolver.php' bgcolor='#eeeeec'>.../ClientResolver.php<b>:</b>323</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>18</td><td bgcolor='#eeeeec' align='center'>0.2949</td><td bgcolor='#eeeeec' align='right'>28108864</td><td bgcolor='#eeeeec'>Aws\Retry\ConfigurationProvider::unwrap(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/S3Client.php' bgcolor='#eeeeec'>.../S3Client.php<b>:</b>629</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>19</td><td bgcolor='#eeeeec' align='center'>0.2954</td><td bgcolor='#eeeeec' align='right'>28131480</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->wait(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/Retry/ConfigurationProvider.php' bgcolor='#eeeeec'>.../ConfigurationProvider.php<b>:</b>200</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>20</td><td bgcolor='#eeeeec' align='center'>0.2954</td><td bgcolor='#eeeeec' align='right'>28131480</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->waitIfPending(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>62</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>21</td><td bgcolor='#eeeeec' align='center'>0.2954</td><td bgcolor='#eeeeec' align='right'>28131480</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->invokeWaitList(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>226</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>22</td><td bgcolor='#eeeeec' align='center'>0.2954</td><td bgcolor='#eeeeec' align='right'>28131480</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->waitIfPending(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>269</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>23</td><td bgcolor='#eeeeec' align='center'>0.2954</td><td bgcolor='#eeeeec' align='right'>28131480</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->invokeWaitFn(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>224</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>24</td><td bgcolor='#eeeeec' align='center'>0.2954</td><td bgcolor='#eeeeec' align='right'>28131480</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\TaskQueue->run(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>248</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>25</td><td bgcolor='#eeeeec' align='center'>0.2954</td><td bgcolor='#eeeeec' align='right'>28131480</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\RejectedPromise::GuzzleHttp\Promise\{closure:/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/RejectedPromise.php:38-51}(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/TaskQueue.php' bgcolor='#eeeeec'>.../TaskQueue.php<b>:</b>48</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>26</td><td bgcolor='#eeeeec' align='center'>0.2954</td><td bgcolor='#eeeeec' align='right'>28131480</td><td bgcolor='#eeeeec'>Aws\Retry\ConfigurationProvider::Aws\Retry\{closure:/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/Retry/ConfigurationProvider.php:157-183}(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/RejectedPromise.php' bgcolor='#eeeeec'>.../RejectedPromise.php<b>:</b>42</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>27</td><td bgcolor='#eeeeec' align='center'>0.2954</td><td bgcolor='#eeeeec' align='right'>28131480</td><td bgcolor='#eeeeec'><a href='http://www.php.net/function.is-readable' target='_new'>is_readable</a>
+(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/Retry/ConfigurationProvider.php' bgcolor='#eeeeec'>.../ConfigurationProvider.php<b>:</b>158</td></tr>
+</table></font>
+<br />
+<font size='1'><table class='xdebug-error xe-warning' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: is_readable(): open_basedir restriction in effect. File(/home/vagrant/.aws/config) is not within the allowed path(s): (/srv/www/:/tmp) in /srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/UseArnRegion/ConfigurationProvider.php on line <i>134</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0006</td><td bgcolor='#eeeeec' align='right'>391616</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>393120</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-blog-header.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>6</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0014</td><td bgcolor='#eeeeec' align='right'>404288</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-load.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-blog-header.php' bgcolor='#eeeeec'>.../wp-blog-header.php<b>:</b>13</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0019</td><td bgcolor='#eeeeec' align='right'>405656</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp-config.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-load.php' bgcolor='#eeeeec'>.../wp-load.php<b>:</b>42</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0329</td><td bgcolor='#eeeeec' align='right'>1408824</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-settings.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp-config.php' bgcolor='#eeeeec'>.../wp-config.php<b>:</b>9</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22334792</td><td bgcolor='#eeeeec'>do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-settings.php' bgcolor='#eeeeec'>.../wp-settings.php<b>:</b>409</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>7</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/plugin.php' bgcolor='#eeeeec'>.../plugin.php<b>:</b>478</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>8</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->apply_filters(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>311</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>9</td><td bgcolor='#eeeeec' align='center'>0.2439</td><td bgcolor='#eeeeec' align='right'>22937536</td><td bgcolor='#eeeeec'>s3_uploads_init(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>287</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>10</td><td bgcolor='#eeeeec' align='center'>0.2487</td><td bgcolor='#eeeeec' align='right'>23233904</td><td bgcolor='#eeeeec'>S3_Uploads->setup(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/s3-uploads.php' bgcolor='#eeeeec'>.../s3-uploads.php<b>:</b>45</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>11</td><td bgcolor='#eeeeec' align='center'>0.2487</td><td bgcolor='#eeeeec' align='right'>23233904</td><td bgcolor='#eeeeec'>S3_Uploads->register_stream_wrapper(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/inc/class-s3-uploads.php' bgcolor='#eeeeec'>.../class-s3-uploads.php<b>:</b>46</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>12</td><td bgcolor='#eeeeec' align='center'>0.2499</td><td bgcolor='#eeeeec' align='right'>23352728</td><td bgcolor='#eeeeec'>S3_Uploads->s3(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/inc/class-s3-uploads.php' bgcolor='#eeeeec'>.../class-s3-uploads.php<b>:</b>76</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>13</td><td bgcolor='#eeeeec' align='center'>0.2499</td><td bgcolor='#eeeeec' align='right'>23353480</td><td bgcolor='#eeeeec'>Aws\AwsClient::factory(  )</td><td title='/srv/www/artcritical.com/current/web/app/plugins/s3-uploads/inc/class-s3-uploads.php' bgcolor='#eeeeec'>.../class-s3-uploads.php<b>:</b>198</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>14</td><td bgcolor='#eeeeec' align='center'>0.2499</td><td bgcolor='#eeeeec' align='right'>23353672</td><td bgcolor='#eeeeec'>Aws\S3\S3Client->__construct(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/AwsClient.php' bgcolor='#eeeeec'>.../AwsClient.php<b>:</b>447</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>15</td><td bgcolor='#eeeeec' align='center'>0.2519</td><td bgcolor='#eeeeec' align='right'>23462368</td><td bgcolor='#eeeeec'>Aws\S3\S3Client->__construct(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/S3Client.php' bgcolor='#eeeeec'>.../S3Client.php<b>:</b>346</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>16</td><td bgcolor='#eeeeec' align='center'>0.2550</td><td bgcolor='#eeeeec' align='right'>23921520</td><td bgcolor='#eeeeec'>Aws\ClientResolver->resolve(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/AwsClient.php' bgcolor='#eeeeec'>.../AwsClient.php<b>:</b>199</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>17</td><td bgcolor='#eeeeec' align='center'>0.3159</td><td bgcolor='#eeeeec' align='right'>29017552</td><td bgcolor='#eeeeec'>Aws\S3\S3Client::_apply_use_arn_region(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/ClientResolver.php' bgcolor='#eeeeec'>.../ClientResolver.php<b>:</b>323</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>18</td><td bgcolor='#eeeeec' align='center'>0.3166</td><td bgcolor='#eeeeec' align='right'>29039496</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->wait(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/S3Client.php' bgcolor='#eeeeec'>.../S3Client.php<b>:</b>433</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>19</td><td bgcolor='#eeeeec' align='center'>0.3166</td><td bgcolor='#eeeeec' align='right'>29039496</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->waitIfPending(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>62</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>20</td><td bgcolor='#eeeeec' align='center'>0.3166</td><td bgcolor='#eeeeec' align='right'>29039496</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->invokeWaitList(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>226</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>21</td><td bgcolor='#eeeeec' align='center'>0.3166</td><td bgcolor='#eeeeec' align='right'>29039496</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->waitIfPending(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>269</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>22</td><td bgcolor='#eeeeec' align='center'>0.3166</td><td bgcolor='#eeeeec' align='right'>29039496</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\Promise->invokeWaitFn(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>224</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>23</td><td bgcolor='#eeeeec' align='center'>0.3166</td><td bgcolor='#eeeeec' align='right'>29039496</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\TaskQueue->run(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/Promise.php' bgcolor='#eeeeec'>.../Promise.php<b>:</b>248</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>24</td><td bgcolor='#eeeeec' align='center'>0.3166</td><td bgcolor='#eeeeec' align='right'>29039496</td><td bgcolor='#eeeeec'>GuzzleHttp\Promise\RejectedPromise::GuzzleHttp\Promise\{closure:/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/RejectedPromise.php:38-51}(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/TaskQueue.php' bgcolor='#eeeeec'>.../TaskQueue.php<b>:</b>48</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>25</td><td bgcolor='#eeeeec' align='center'>0.3166</td><td bgcolor='#eeeeec' align='right'>29039496</td><td bgcolor='#eeeeec'>Aws\S3\UseArnRegion\ConfigurationProvider::Aws\S3\UseArnRegion\{closure:/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/UseArnRegion/ConfigurationProvider.php:133-159}(  )</td><td title='/srv/www/artcritical.com/current/vendor/guzzlehttp/promises/src/RejectedPromise.php' bgcolor='#eeeeec'>.../RejectedPromise.php<b>:</b>42</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>26</td><td bgcolor='#eeeeec' align='center'>0.3166</td><td bgcolor='#eeeeec' align='right'>29039496</td><td bgcolor='#eeeeec'><a href='http://www.php.net/function.is-readable' target='_new'>is_readable</a>
+(  )</td><td title='/srv/www/artcritical.com/current/vendor/aws/aws-sdk-php/src/S3/UseArnRegion/ConfigurationProvider.php' bgcolor='#eeeeec'>.../ConfigurationProvider.php<b>:</b>134</td></tr>
+</table></font>
+<br />
+<font size='1'><table class='xdebug-error xe-deprecated' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Deprecated: Array and string offset access syntax with curly braces is deprecated in /srv/www/artcritical.com/current/web/app/plugins/s3-uploads/lib/getid3/getid3.php on line <i>554</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0006</td><td bgcolor='#eeeeec' align='right'>391616</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>393120</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-blog-header.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>6</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0014</td><td bgcolor='#eeeeec' align='right'>404288</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-load.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-blog-header.php' bgcolor='#eeeeec'>.../wp-blog-header.php<b>:</b>13</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0019</td><td bgcolor='#eeeeec' align='right'>405656</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp-config.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-load.php' bgcolor='#eeeeec'>.../wp-load.php<b>:</b>42</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0329</td><td bgcolor='#eeeeec' align='right'>1408824</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-settings.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp-config.php' bgcolor='#eeeeec'>.../wp-config.php<b>:</b>9</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22334792</td><td bgcolor='#eeeeec'>do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-settings.php' bgcolor='#eeeeec'>.../wp-settings.php<b>:</b>409</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>7</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/plugin.php' bgcolor='#eeeeec'>.../plugin.php<b>:</b>478</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>8</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->apply_filters(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>311</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>9</td><td bgcolor='#eeeeec' align='center'>0.2439</td><td bgcolor='#eeeeec' align='right'>22937536</td><td bgcolor='#eeeeec'>s3_uploads_init(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>287</td></tr>
+</table></font>
+<br />
+<font size='1'><table class='xdebug-error xe-deprecated' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Deprecated: Array and string offset access syntax with curly braces is deprecated in /srv/www/artcritical.com/current/web/app/plugins/s3-uploads/lib/getid3/getid3.php on line <i>555</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0006</td><td bgcolor='#eeeeec' align='right'>391616</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>393120</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-blog-header.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>6</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0014</td><td bgcolor='#eeeeec' align='right'>404288</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-load.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-blog-header.php' bgcolor='#eeeeec'>.../wp-blog-header.php<b>:</b>13</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0019</td><td bgcolor='#eeeeec' align='right'>405656</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp-config.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-load.php' bgcolor='#eeeeec'>.../wp-load.php<b>:</b>42</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0329</td><td bgcolor='#eeeeec' align='right'>1408824</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-settings.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp-config.php' bgcolor='#eeeeec'>.../wp-config.php<b>:</b>9</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22334792</td><td bgcolor='#eeeeec'>do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-settings.php' bgcolor='#eeeeec'>.../wp-settings.php<b>:</b>409</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>7</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->do_action(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/plugin.php' bgcolor='#eeeeec'>.../plugin.php<b>:</b>478</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>8</td><td bgcolor='#eeeeec' align='center'>0.2320</td><td bgcolor='#eeeeec' align='right'>22335168</td><td bgcolor='#eeeeec'>WP_Hook->apply_filters(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>311</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>9</td><td bgcolor='#eeeeec' align='center'>0.2439</td><td bgcolor='#eeeeec' align='right'>22937536</td><td bgcolor='#eeeeec'>s3_uploads_init(  )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/class-wp-hook.php' bgcolor='#eeeeec'>.../class-wp-hook.php<b>:</b>287</td></tr>
+</table></font>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" ng-app="artCritical" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>&quot;The Substance of Art&quot;: Dorothea Rockburne in Beacon - artcritical artcritical</title>
+<style type="text/css">
+@import url("http://artcritical.test/app/themes/artcritical/style.css");
+</style>
+<script src='//artcritical.test/app/cache/wpfc-minified/esfme8jr/20jf7.js' type="text/javascript"></script>
+<!-- <script src="http://artcritical.test/app/themes/artcritical/js/jquery-1.11.3.min.js"></script> -->
+<!-- <link rel="stylesheet" type="text/css" media="print" href="http://artcritical.test/app/themes/artcritical/print.css" /> -->
+<link rel="stylesheet" type="text/css" href="//artcritical.test/app/cache/wpfc-minified/9ltj0p7q/20jf7.css" media="print"/>
+<!-- This site is optimized with the Yoast SEO plugin v15.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="&quot;The Substance of Art&quot;: Dorothea Rockburne in Beacon - artcritical" />
+<meta property="og:description" content="Robert Storr will lecture on Rockburne&#039;s work at Dia:Beacon, 2PM Saturday" />
+<meta property="og:url" content="http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/" />
+<meta property="og:site_name" content="artcritical" />
+<meta property="article:publisher" content="https://www.facebook.com/artcritical" />
+<meta property="article:published_time" content="2019-01-25T15:38:53+00:00" />
+<meta property="article:modified_time" content="2019-01-26T18:14:37+00:00" />
+<meta property="og:image" content="https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/Dorothea-Rockburne.-Photo-Rebecca-Allanjpg.jpg" />
+<meta property="og:image:width" content="518" />
+<meta property="og:image:height" content="500" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@ac_eds" />
+<meta name="twitter:site" content="@ac_eds" />
+<meta name="twitter:label1" content="Written by">
+<meta name="twitter:data1" content="Rebecca Allan">
+<meta name="twitter:label2" content="Est. reading time">
+<meta name="twitter:data2" content="7 minutes">
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"http://artcritical.test/#website","url":"http://artcritical.test/","name":"artcritical","description":"","potentialAction":[{"@type":"SearchAction","target":"http://artcritical.test/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/#primaryimage","inLanguage":"en-US","url":"https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/Dorothea-Rockburne.-Photo-Rebecca-Allanjpg.jpg","width":518,"height":500,"caption":"Dorothea Rockburne. Photo: Rebecca Allan"},{"@type":"WebPage","@id":"http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/#webpage","url":"http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/","name":"\"The Substance of Art\": Dorothea Rockburne in Beacon - artcritical","isPartOf":{"@id":"http://artcritical.test/#website"},"primaryImageOfPage":{"@id":"http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/#primaryimage"},"datePublished":"2019-01-25T15:38:53+00:00","dateModified":"2019-01-26T18:14:37+00:00","author":{"@id":"http://artcritical.test/#/schema/person/7dbf479a3e93d90419a2da8d00210617"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/"]}]},{"@type":"Person","@id":"http://artcritical.test/#/schema/person/7dbf479a3e93d90419a2da8d00210617","name":"Rebecca Allan","description":"Rebecca Allan is a New York-based painter, writer, and educator. Exhibiting in the United States and abroad for more than 25 years, she was most recently the Director of Public Programs (2006\u20132014) at Bard Graduate Center and Curator of Education at the National Academy Museum (2004-2006). Allan is a principal creator of The Crossroads Project \u2014 a performance piece on sustainability \u2014 in collaboration with physicist Robert Davies, The Fry Street Quartet, and composer Laura Kaminsky. She received her MFA from Kent State University, and BA from Allegheny College, and has been a fellow at The Hermitage Artists Retreat; Centrum Foundation, Virginia Center for the Creative Arts, and Dorland Mountain Arts Colony, as well as a visiting artist at venues including Lebanese American University, Utah State University, and Doane College in Nebraska. She also teaches art criticism and art history at The College of Mount Saint Vincent and Marymount Manhattan College."}]}</script>
+<!-- / Yoast SEO plugin. -->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='dns-prefetch' href='//artcritical-uploads.s3.amazonaws.com' />
+<link rel="alternate" type="application/rss+xml" title="artcritical &raquo; &#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon Comments Feed" href="http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/artcritical.test\/wp\/wp-includes\/js\/wp-emoji.js?ver=5.5.3","twemoji":"http:\/\/artcritical.test\/wp\/wp-includes\/js\/twemoji.js?ver=5.5.3"}};
+/**
+* @output wp-includes/js/wp-emoji-loader.js
+*/
+( function( window, document, settings ) {
+var src, ready, ii, tests;
+// Create a canvas element for testing native browser support of emoji.
+var canvas = document.createElement( 'canvas' );
+var context = canvas.getContext && canvas.getContext( '2d' );
+/**
+* Checks if two sets of Emoji characters render the same visually.
+*
+* @since 4.9.0
+*
+* @private
+*
+* @param {number[]} set1 Set of Emoji character codes.
+* @param {number[]} set2 Set of Emoji character codes.
+*
+* @return {boolean} True if the two sets render the same.
+*/
+function emojiSetsRenderIdentically( set1, set2 ) {
+var stringFromCharCode = String.fromCharCode;
+// Cleanup from previous test.
+context.clearRect( 0, 0, canvas.width, canvas.height );
+context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+var rendered1 = canvas.toDataURL();
+// Cleanup from previous test.
+context.clearRect( 0, 0, canvas.width, canvas.height );
+context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+var rendered2 = canvas.toDataURL();
+return rendered1 === rendered2;
+}
+/**
+* Detects if the browser supports rendering emoji or flag emoji.
+*
+* Flag emoji are a single glyph made of two characters, so some browsers
+* (notably, Firefox OS X) don't support them.
+*
+* @since 4.2.0
+*
+* @private
+*
+* @param {string} type Whether to test for support of "flag" or "emoji".
+*
+* @return {boolean} True if the browser can render emoji, false if it cannot.
+*/
+function browserSupportsEmoji( type ) {
+var isIdentical;
+if ( ! context || ! context.fillText ) {
+return false;
+}
+/*
+* Chrome on OS X added native emoji rendering in M41. Unfortunately,
+* it doesn't work when the font is bolder than 500 weight. So, we
+* check for bold rendering support to avoid invisible emoji in Chrome.
+*/
+context.textBaseline = 'top';
+context.font = '600 32px Arial';
+switch ( type ) {
+case 'flag':
+/*
+* Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+* but has landed in Twemoji early, so we can add support for it, too.
+*
+* To test for support, we try to render it, and compare the rendering to how it would look if
+* the browser doesn't render it correctly (white flag emoji + transgender symbol).
+*/
+isIdentical = emojiSetsRenderIdentically(
+[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+);
+if ( isIdentical ) {
+return false;
+}
+/*
+* Test for UN flag compatibility. This is the least supported of the letter locale flags,
+* so gives us an easy test for full support.
+*
+* To test for support, we try to render it, and compare the rendering to how it would look if
+* the browser doesn't render it correctly ([U] + [N]).
+*/
+isIdentical = emojiSetsRenderIdentically(
+[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+);
+if ( isIdentical ) {
+return false;
+}
+/*
+* Test for English flag compatibility. England is a country in the United Kingdom, it
+* does not have a two letter locale code but rather an five letter sub-division code.
+*
+* To test for support, we try to render it, and compare the rendering to how it would look if
+* the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+*/
+isIdentical = emojiSetsRenderIdentically(
+[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+);
+return ! isIdentical;
+case 'emoji':
+/*
+* So easy, even a baby could do it!
+*
+*  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+*
+* The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+*
+* 0xD83D, 0xDC68 == Man emoji.
+* 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+* 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+* 0xD83C, 0xDF7C == Baby Bottle.
+*
+* When updating this test for future Emoji releases, ensure that individual emoji that make up the
+* sequence come from older emoji standards.
+*/
+isIdentical = emojiSetsRenderIdentically(
+[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+);
+return ! isIdentical;
+}
+return false;
+}
+/**
+* Adds a script to the head of the document.
+*
+* @ignore
+*
+* @since 4.2.0
+*
+* @param {Object} src The url where the script is located.
+* @return {void}
+*/
+function addScript( src ) {
+var script = document.createElement( 'script' );
+script.src = src;
+script.defer = script.type = 'text/javascript';
+document.getElementsByTagName( 'head' )[0].appendChild( script );
+}
+tests = Array( 'flag', 'emoji' );
+settings.supports = {
+everything: true,
+everythingExceptFlag: true
+};
+/*
+* Tests the browser support for flag emojis and other emojis, and adjusts the
+* support settings accordingly.
+*/
+for( ii = 0; ii < tests.length; ii++ ) {
+settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+if ( 'flag' !== tests[ ii ] ) {
+settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+}
+}
+settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+// Sets DOMReady to false and assigns a ready function to settings.
+settings.DOMReady = false;
+settings.readyCallback = function() {
+settings.DOMReady = true;
+};
+// When the browser can not render everything we need to load a polyfill.
+if ( ! settings.supports.everything ) {
+ready = function() {
+settings.readyCallback();
+};
+/*
+* Cross-browser version of adding a dom ready event.
+*/
+if ( document.addEventListener ) {
+document.addEventListener( 'DOMContentLoaded', ready, false );
+window.addEventListener( 'load', ready, false );
+} else {
+window.attachEvent( 'onload', ready );
+document.attachEvent( 'onreadystatechange', function() {
+if ( 'complete' === document.readyState ) {
+settings.readyCallback();
+}
+} );
+}
+src = settings.source || {};
+if ( src.concatemoji ) {
+addScript( src.concatemoji );
+} else if ( src.wpemoji && src.twemoji ) {
+addScript( src.twemoji );
+addScript( src.wpemoji );
+}
+}
+} )( window, document, window._wpemojiSettings );
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<!-- <link rel='stylesheet' id='wp-block-library-css'  href='http://artcritical.test/wp/wp-includes/css/dist/block-library/style.css?ver=5.5.3' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//artcritical.test/app/cache/wpfc-minified/e3k0uxqv/20jf7.css" media="all"/>
+<link rel="https://api.w.org/" href="http://artcritical.test/wp-json/" /><link rel="alternate" type="application/json" href="http://artcritical.test/wp-json/wp/v2/posts/80281" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://artcritical.test/wp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://artcritical.test/wp/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.5.3" />
+<link rel='shortlink' href='http://artcritical.test/?p=80281' />
+<link rel="alternate" type="application/json+oembed" href="http://artcritical.test/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fartcritical.test%2F2019%2F01%2F25%2Frebecca-allan-on-dorothea-rockburne%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://artcritical.test/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fartcritical.test%2F2019%2F01%2F25%2Frebecca-allan-on-dorothea-rockburne%2F&#038;format=xml" />
+<script src='//artcritical.test/app/cache/wpfc-minified/1zb3iket/20jf7.js' type="text/javascript"></script>
+<!-- <script type='text/javascript' src='http://artcritical.test/wp/wp-includes/js/wp-embed.js?ver=5.5.3' id='wp-embed-js'></script> -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js"></script>
+<script src='//artcritical.test/app/cache/wpfc-minified/96gwuk60/20jf7.js' type="text/javascript"></script>
+<!-- <script src="http://artcritical.test/app/themes/artcritical/js/functions.js" type="text/javascript"></script> -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.4.0/coffee-script.min.js"></script>
+<script src='//artcritical.test/app/cache/wpfc-minified/cgykyax/20jf7.js' type="text/javascript"></script>
+<!-- <script src="http://artcritical.test/app/themes/artcritical/js/app.js"></script> -->
+</head>
+<body>
+<div class="container">
+<div id="header">
+<div id="topmenucontainer">
+<div id="logo" style="padding-top:15px;float:left;height:70px"><a href="http://artcritical.test"><img src="http://artcritical.test/app/themes/artcritical/images/logo.png"></a></div>
+<div id="vulture728x90" style="float:right; margin-bottom:10px;margin-top:3px;">
+<!-- BANNER AD FOR INSIDE PAGE -->
+<script language="JavaScript" type="text/javascript">
+window.dctile = Number(window.dctile) + 1 || 1;
+window.dc_ord = Number(window.dc_ord) || Math.floor(Math.random() * 1E10);
+if (dctile==1) {var vdcopt = 'ist';} else {vdcopt = '';}
+if (17>dctile) document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/nym.vulturenetwork.artcritical/ros;dcopt=' + vdcopt + ';tile=' + dctile + ';sz=728x90;ord=' + dc_ord + '?"><\/script>\n');
+</script>
+<noscript><a href="http://ad.doubleclick.net/jump/nym.vulturenetwork.artcritical/ros;sz=728x90;ord=123456789?"><img src="http://ad.doubleclick.net/ad/nym.vulturenetwork.artcritical/ros;sz=728x90;ord=123456789?" border="0"></a></noscript>
+<!-- END BANNER AD FOR INSIDE PAGE -->
+</div>
+<br style="clear:both">
+</div>
+<div id="bottommenucontainer">
+<div id="menu">
+<ul>
+<li class="color_thelist menuitem-listing" id="thelist-ddheader" onmouseover="ddMenu('thelist',1)" onmouseout="ddMenu('thelist',-1)">The List</li>
+<li class="color_criticism" id="criticism-ddheader" onmouseover="ddMenu('criticism',1)" onmouseout="ddMenu('criticism',-1)">Criticism</li>
+<li class="color_features" id="features-ddheader" onmouseover="ddMenu('features',1)" onmouseout="ddMenu('features',-1)">Features</li>
+<li class="color_artworld" id="artworld-ddheader" onmouseover="ddMenu('artworld',1)" onmouseout="ddMenu('artworld',-1)">Art World</li>
+<li class="color_departments" id="departments-ddheader" onmouseover="ddMenu('departments',1)" onmouseout="ddMenu('departments',-1)">Departments</li>
+<li class="color_reviewpanel" id="reviewpanel-ddheader" onmouseover="ddMenu('reviewpanel',1)" onmouseout="ddMenu('reviewpanel',-1)">The Review Panel</li>
+</ul>
+<div class="tl_dropdown" id="thelist-ddcontent" onmouseover="cancelHide('thelist')" onmouseout="ddMenu('thelist',-1)" >
+<a href="https://list.artcritical.com">Week at a Glance</a>
+<a href="https://list.artcritical.com/current">Current</a>
+<a href="https://list.artcritical.com/events">Lectures/Events</a>
+</div>
+<div class="cr_dropdown" id="criticism-ddcontent" onmouseover="cancelHide('criticism')" onmouseout="ddMenu('criticism',-1)">
+<a href="http://artcritical.test/category/criticism/exhibitions/">Exhibitions</a>
+<a href="http://artcritical.test/category/criticism/books/">Books</a>
+<a href="http://artcritical.test/category/criticism/film-music-performance/">Film/Music/Performance</a>
+<a href="http://artcritical.test/category/criticism/dispatches/">Dispatches</a>
+<a href="http://artcritical.test/category/criticism/cyber/">Internet and Cyber Projects</a>
+<a href="http://artcritical.test/category/criticism/architecture/">Architecture and Design</a>
+<div class="subhead">Regular writers include:</div>
+<div class="submenu">
+<a href="http://artcritical.test/wp/author/david">David Cohen</a><a href="http://artcritical.test/wp/author/david-carrier">David Carrier</a><a href="http://artcritical.test/wp/author/nora-griffin">Nora Griffin</a><a href="http://artcritical.test/wp/author/edmund-white">Edmund White</a><a href="http://artcritical.test/wp/author/david-plante">David Plante</a><a href="http://artcritical.test/wp/author/nd">Noah Dillon</a>			<a href="http://artcritical.com/browse/?tab=byauthor">More...</a>
+</div>
+</div>
+<div class="fe_dropdown" id="features-ddcontent" onmouseover="cancelHide('features')" onmouseout="ddMenu('features',-1)" >
+<a href="http://artcritical.test/category/features/feature-articles/">Commentary</a>
+<a href="http://artcritical.test/category/features/studio-visits/">Studio visits</a>
+<a href="http://artcritical.test/category/features/roundtable/">Roundtable</a>
+<a href="http://artcritical.test/category/features/capsules/">a featured item from THE LIST</a>
+<a href="http://artcritical.test/category/features/poetry-for-art/">Poetry For Art</a>
+<a href="http://artcritical.test/category/features/bookmarked/">Bookmarked</a>
+<a href="http://artcritical.test/category/features/essay/">Essay</a>
+<a href="http://artcritical.test/category/features/extract/">extract</a>
+</div>
+<div class="aw_dropdown" id="artworld-ddcontent" onmouseover="cancelHide('artworld')" onmouseout="ddMenu('artworld',-1)" >
+<a href="http://artcritical.test/category/artworld/newsdesk/">Newsdesk</a>
+<a href="http://artcritical.test/category/artworld/out-and-about/">Out and About</a>
+<a href="http://artcritical.test/category/artworld/art-business/">Art Business</a>
+<a href="http://artcritical.test/category/artworld/tributes/">Tributes</a>
+<a href="http://artcritical.test/category/artworld/art-fairs/">Art Fairs</a>
+<a href="http://artcritical.test/category/artworld/frieze-week-2018/">Frieze Week 2018</a>
+<a href="http://artcritical.test/category/artworld/miami-2018/">Miami 2018</a>
+</div>
+<div class="de_dropdown" id="departments-ddcontent" onmouseover="cancelHide('departments')" onmouseout="ddMenu('departments',-1)" >
+<a href="http://artcritical.test/category/departments/welcome-to-this-issue/">Welcome to this Issue</a>
+<a href="http://artcritical.test/category/departments/editorial/">Editorial</a>
+<a href="http://artcritical.test/category/departments/competitions/">Competitions</a>
+<a href="http://artcritical.test/category/departments/recipes/">Recipes</a>
+<a href="http://artcritical.test/category/departments/pics/">Pics</a>
+<a href="http://artcritical.test/category/departments/tips/">Tips</a>
+<a href="http://artcritical.test/category/departments/hubs/">Hubs</a>
+<a href="http://artcritical.test/listings-week">The List</a>
+</div>
+<div class="rp_dropdown" id="reviewpanel-ddcontent" onmouseover="cancelHide('reviewpanel')" onmouseout="ddMenu('reviewpanel',-1)" >
+<a href="http://artcritical.test/subscribe">Newsletter</a>
+<a href="http://artcritical.test/2020/09/11/review-panel-returns-via-zoom/">The Review Panel Returns, via Zoom</a>
+<a href="http://artcritical.com/category/departments/the-review-panel">Archive</a>
+<a href="http://artcritical.test/2019/10/25/podcast-review-panel-october-2019/">				Latest Podcast - October 2019			</a>		</div>
+</div>
+<div id="search_follow">
+<form method="get" id="searchform" action="http://artcritical.test/">	
+<input type="image" src="http://artcritical.test/app/themes/artcritical/images/search.png" style="vertical-align:middle;">
+<input type="text" name="s" style="font-size:13px;padding:2px;">
+</form>
+</div>
+<br style="clear:both">
+<div id="submenu">
+<h2><a href="http://artcritical.test/browse">Archive</a></h2> |  
+<h2><a href="http://artcritical.test/subscribe">Subscribe</a></h2> | 
+<h2><a href="http://artcritical.test/about">About Us</a></h2> | 
+<h2><a href="http://artcritical.test/support">Advertise/Support</a></h2>
+</div>
+<br style="clear:both">
+</div>
+<hr>
+</div>
+<!-- END HEADER -->	<div id="main">
+<br />
+<font size='1'><table class='xdebug-error xe-notice' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Notice: Only variables should be assigned by reference in /srv/www/artcritical.com/current/web/app/themes/artcritical/lib/functions.php on line <i>73</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0006</td><td bgcolor='#eeeeec' align='right'>391616</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>393120</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-blog-header.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>6</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.5187</td><td bgcolor='#eeeeec' align='right'>35390880</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-includes/template-loader.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-blog-header.php' bgcolor='#eeeeec'>.../wp-blog-header.php<b>:</b>19</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.5229</td><td bgcolor='#eeeeec' align='right'>35409600</td><td bgcolor='#eeeeec'>include( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/app/themes/artcritical/single.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/template-loader.php' bgcolor='#eeeeec'>.../template-loader.php<b>:</b>106</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>1.5307</td><td bgcolor='#eeeeec' align='right'>37674896</td><td bgcolor='#eeeeec'>get_cat_slug(  )</td><td title='/srv/www/artcritical.com/current/web/app/themes/artcritical/single.php' bgcolor='#eeeeec'>.../single.php<b>:</b>15</td></tr>
+</table></font>
+<span class="futura">features</span><span class="arrow"> &#x25B6; </span><span class="futura"><a href="<br />
+<font size='1'><table class='xdebug-error xe-notice' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Notice: Only variables should be assigned by reference in /srv/www/artcritical.com/current/web/app/themes/artcritical/lib/functions.php on line <i>73</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0006</td><td bgcolor='#eeeeec' align='right'>391616</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>393120</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-blog-header.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>6</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.5187</td><td bgcolor='#eeeeec' align='right'>35390880</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/wp/wp-includes/template-loader.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-blog-header.php' bgcolor='#eeeeec'>.../wp-blog-header.php<b>:</b>19</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.5229</td><td bgcolor='#eeeeec' align='right'>35409600</td><td bgcolor='#eeeeec'>include( <font color='#00bb00'>'/srv/www/artcritical.com/current/web/app/themes/artcritical/single.php'</font> )</td><td title='/srv/www/artcritical.com/current/web/wp/wp-includes/template-loader.php' bgcolor='#eeeeec'>.../template-loader.php<b>:</b>106</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>1.5310</td><td bgcolor='#eeeeec' align='right'>37691280</td><td bgcolor='#eeeeec'>get_archive_link(  )</td><td title='/srv/www/artcritical.com/current/web/app/themes/artcritical/single.php' bgcolor='#eeeeec'>.../single.php<b>:</b>17</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>1.5310</td><td bgcolor='#eeeeec' align='right'>37691280</td><td bgcolor='#eeeeec'>get_cat_slug(  )</td><td title='/srv/www/artcritical.com/current/web/app/themes/artcritical/lib/functions.php' bgcolor='#eeeeec'>.../functions.php<b>:</b>79</td></tr>
+</table></font>
+http://artcritical.test/wp/category/features/studio-visits/">Studio visits</a></span>  
+<hr class="color_features">
+<div id="article">
+<div id="date">Friday, January 25th, 2019</div> 
+<!-- <div id="date">&nbsp;| <a href="http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/#respond">Comments (0)</a></div> -->
+<div id="tools"> 
+<span class='st_facebook_buttons' st_title='&#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon' st_url='http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/' displayText='share'></span><span class='st_twitter_buttons' st_title='&#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon' st_url='http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/' displayText='share'></span><span class='st_email_buttons' st_title='&#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon' st_url='http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/' displayText='share'></span><span class='st_plusone_buttons' st_title='&#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon' st_url='http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/' displayText='share'></span><span class='print'><a href="#" onclick="window.print();return false;">print</a> </span>
+</div>
+<div id="share"></div>
+<br style="clear:both">
+<h1 class="textcolor_features">&#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon</h1>
+<div id="date" style="padding-bottom:15px"><strong>by <a href="http://artcritical.test/author/rebecca-allan/" title="Posts by Rebecca Allan" rel="author">Rebecca Allan</a></strong></div>
+<br style="clear:both">
+<div id="body">
+<p><strong>Over the course of several trips to Beacon for her expanding, long-term installation at Dia: Beacon, Dorothea Rockburne opens up to Rebecca Allan. On Saturday, January 26 Robert Storr will lecture on Rockburne&#8217;s work at 2PM</strong></p>
+<p><strong>3 Beekman Street, Beacon, New York 12508, diaart.org</strong></p>
+<div style="width: 560px" class="wp-caption alignnone"><a href="https://www.artcritical.com/wp-content/uploads/2019/01/material-tests-for-Domain-of-the-Variable.jpg" rel="attachment wp-att-80282"><img loading="lazy" class="size-full wp-image-80282" src="https://www.artcritical.com/wp-content/uploads/2019/01/material-tests-for-Domain-of-the-Variable.jpg" alt="Installation view, Z from Domain of the Variable, 1972/2018. Chipboard, contact cement, paper, grease, and charcoal. 60.5 x 180 inches. Photo: Rebecca Allan" width="550" height="353" srcset="https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/material-tests-for-Domain-of-the-Variable.jpg 550w, https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/material-tests-for-Domain-of-the-Variable-275x177.jpg 275w" sizes="(max-width: 550px) 100vw, 550px" /></a><p class="wp-caption-text">Material tests for Domain of the Variable, 1972/2018. Chipboard, contact cement, paper, grease, and charcoal. 60.5 x 180 inches. Photo: Rebecca Allan</p></div>
+<p>&#8220;You don&#8217;t see birds&#8217; nests along here anymore and I used to find <em>hundreds </em>along the Hudson River. It really troubles me.&#8221; Dorothea Rockburne and I are driving from New York City on the Palisades Parkway north toward Beacon, when she points out the absence of songbirds, a critical indicator of intact woodlands. I&#8217;m watching how she looks out the window, looking at her eyes—transparent pools of turquoise and malachite, anchored by the sharpest pupils.</p>
+<p>Absence, presence, retrieval of the natural world, and our relationship to the universe are the topics that we discuss over several visits from July, 2018 until our December excursion.  At Dia:Beacon, Rockburne will spend the day refining the final installation phase of her long-term exhibition, which opened last year with a presentation of the artist&#8217;s large-scale works from the late 1960s and early 1970s. In January, it reopens with newly added galleries, featuring works produced in the early 1970s through the early 1980s.</p>
+<div id="attachment_80283" style="width: 285px" class="wp-caption alignleft"><a href="https://www.artcritical.com/wp-content/uploads/2019/01/Dorothea-Rockburne.-Photo-Rebecca-Allanjpg.jpg" rel="attachment wp-att-80283"><img aria-describedby="caption-attachment-80283" loading="lazy" class="size-medium wp-image-80283" src="https://www.artcritical.com/wp-content/uploads/2019/01/Dorothea-Rockburne.-Photo-Rebecca-Allanjpg-275x265.jpg" alt="Dorothea Rockburne. Photo: Rebecca Allan" width="275" height="265" srcset="https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/Dorothea-Rockburne.-Photo-Rebecca-Allanjpg-275x265.jpg 275w, https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/Dorothea-Rockburne.-Photo-Rebecca-Allanjpg-32x32.jpg 32w, https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/Dorothea-Rockburne.-Photo-Rebecca-Allanjpg.jpg 518w" sizes="(max-width: 275px) 100vw, 275px" /></a><p id="caption-attachment-80283" class="wp-caption-text">Dorothea Rockburne. Photo: Rebecca Allan</p></div>
+<p><em>Dorothea Rockburne</em>, organized by chief curator Courtney Martin, encompasses a body of work that is informed by the artist&#8217;s lifelong investigations of astronomy, dance movement, mathematics, Egyptian and Classical art, and architecture. Existing paintings and works on paper are juxtaposed with recreated works made by the artist, and with Dia staff under her rigorous direction. Guided by her work diaries from the 1970s and documentary images of the original works when they were shown at the Spoleto Festival in Italy and New York&#8217;s Bykert Gallery, the exhibition catalyzes a set of questions about our capacity to perceive light, space and form, and to &#8220;&#8230;develop an empathic recognition of the human condition that is the substance of art.</p>
+<p>For several months, Rockburne commuted to Beacon to experiment with new materials that replaced the original, non-art, industrial substances. In the late 1960s working from a studio on Chambers Street with little money to buy expensive art supplies, the artist found at the hardware store crude oil, cup grease, and chipboard, materials that mimicked the earth pigments of Renaissance painting. Today, reimagining works that were never really made to last underscores how deeply Rockburne continues to interweave her knowledge of ancient art and modern dance.</p>
+<p>Receiving her early education at the École des Beaux-Arts and the Montreal Museum School, Rockburne studied at Black Mountain College, moved to New York in the mid-1950s and waited tables while raising a daughter. At the Metropolitan Museum of Art she worked in the finance office while helping to catalog the collection of Egyptian antiquities. She later worked for Robert Rauschenberg, remaining deeply devoted to him as a friend for years. In 1960, she participated in the Judson Dance Theatre, working with pioneers Steve Paxton, Yvonne Rainer, and Lucinda Childs. The experimental vocabulary of dance that was being developed at Judson reconnected Rockburne with her growing up years in Quebec, and the athleticism she experienced in skiing and swimming. Her leitmotifs for the next two decades —the folding movements of the body and its engagement with gravity and space—were inspired by her joy in the activation of her own limbs in the domain of dance.</p>
+<p>Today, the energy quickens in the cavernous yet inviting galleries of Dia:Beacon as Rockburne, self-directed and moving with steady power at 86, re-enters work mode. She is greeted by Heidie Giannotti, Dia&#8217;s director of exhibition design and installation, and her team as they discuss a checklist of final tasks to accomplish during the next several hours. The atmosphere is companionable, with an edge of intense concentration that feels like musicians tuning before performing a Bartók string quartet. A lot of decisions involving complicated processes have to be made in a short time frame, and these will depend upon how the new materials that have been painstakingly tested over the past several months respond to the humidity, light, and gravity. Like ancient Egyptian laborers who positioned the <em>benben</em> (the top stone of a pyramid), the strength and skill of Giannotti&#8217;s team is impressive. Everyone is invested in the project&#8217;s success, and Rockburne, who has developed precise (even poetic) instructions for the presentation/recreation of her works, appreciates their individual contribution.</p>
+<p>Standing at the opposite end of a large gallery, Rockburne scrutinizes a group of four art handlers who are executing the placement of the components of <em>Set</em> (1970), a work that spans a huge wall. They gradually raise and lower an unwieldy rectangle of chipboard that will anchor a large sheet of ibis-colored white paper against the wall. Rockburne judges its placement, Giannotti looks at Rockburne, nods decisively, and everyone channels their effort so that the revealed vertical edges of the paper will curl just-so (<em>for the love of Pythagorus, don&#8217;t tear!</em>). Board, paper, and nails ultimately form a set of harmonious positive and negative shapes that visually interlock with the wall.</p>
+<div id="attachment_80284" style="width: 285px" class="wp-caption alignleft"><a href="https://www.artcritical.com/wp-content/uploads/2019/01/Tropical-Tan-1967-68.-Wrinkle-finish-paint-on-black-steel.-96-x-144-inches-installed.-Courtesy-the-artist.-Photo-Rebecca-Allan.jpg" rel="attachment wp-att-80284"><img aria-describedby="caption-attachment-80284" loading="lazy" class="size-medium wp-image-80284" src="https://www.artcritical.com/wp-content/uploads/2019/01/Tropical-Tan-1967-68.-Wrinkle-finish-paint-on-black-steel.-96-x-144-inches-installed.-Courtesy-the-artist.-Photo-Rebecca-Allan-275x305.jpg" alt="Tropical Tan, 1967-68. Wrinkle finish paint on black steel 96 x 144 inches installed. Courtesy the artist. Photo: Rebecca Allan" width="275" height="305" srcset="https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/Tropical-Tan-1967-68.-Wrinkle-finish-paint-on-black-steel.-96-x-144-inches-installed.-Courtesy-the-artist.-Photo-Rebecca-Allan-275x305.jpg 275w, https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/Tropical-Tan-1967-68.-Wrinkle-finish-paint-on-black-steel.-96-x-144-inches-installed.-Courtesy-the-artist.-Photo-Rebecca-Allan.jpg 451w" sizes="(max-width: 275px) 100vw, 275px" /></a><p id="caption-attachment-80284" class="wp-caption-text">Tropical Tan, 1967-68. Wrinkle finish paint on black steel 96 x 144 inches installed. Courtesy the artist. Photo: Rebecca Allan</p></div>
+<p>Classical Greek architects utilized <em>entasis</em>, a sophisticated geometry to correct for optical illusions or distortions in their temples, and Rockburne similarly adjusts her elements to solve the equation of perfection within her mind&#8217;s eye. &#8220;Set Theory,&#8221; the artist explains, &#8220;signifies the desire to classify group situations, both numerically and symbolically. The ancient Greeks were the first to value groups of things like people, angels, and numbers. But the German mathematician Georg Cantor articulated this as a mathematical form to describe this principle, in 1874.&#8221; Do not underestimate the mental repetition required to engrave remarks like this into this writer&#8217;s brain.</p>
+<p><em>Tropical Tan</em> (1967-68), a severely elegant polyptych at 94 by 144 inches, reveals the artist&#8217;s concerns with light, weight, and the potential for apparently unchanging materials to exist as liquids or solids. Four pig iron (black steel) panels were sprayed with wrinkle-finish paint to form a contiguous horizontal band across their centers, with exposed bands of steel along their upper and lower edges. Inspired by air ducts in the artist&#8217;s studio, each panel was crimped, forming a low-relief cross (visualize the Roman numeral for ten) within the bend. Depending upon the light and your position, the steel takes on a blue cast against the soft, chamois-gold of the paint color. This chromatic duet, along with the employment of geometry evokes the drapery of figures in Giotto&#8217;s divine Scrovegni Chapel frescoes at Padua, an important touchstone for the artist.</p>
+<p>In <em>Domain of the Variable</em> (1972-2018), a multifaceted installation, there is a small V-shaped groove carved into the wall around its entire perimeter. The groove sits about waist-high, referencing a proportion in Egyptian art but also suggesting a miniature version of the negative space in Barnett Newman&#8217;s <em>Broken Obelisk</em>. It takes time to absorb each element of this installation but for me—a painter and gardener—the effect of a gelatinous substance called lithium-complex red grease (the color of pomegranate seeds) that has been applied to and absorbed into a length of that luminous paper is deeply moving.</p>
+<p>Follow that Egyptian groove, turn the corner, and enter a room whose floor and walls are painted an almost blinding white. <em>Drawing Which Makes Itself</em> (1972-73) exists in a continuum of time. The dirt particles deposited by your footwear on this continent of white will accrue with those of previous and future visitors, satisfying Rockburne&#8217;s intention for its completion by your presence. On the walls are the artist&#8217;s corresponding carbon paper drawings, which were motivated by her desire to &#8220;investigate the geometry intrinsic to every sheet of paper.&#8221; Rockburne developed a process for folding the matte, deep blue paper and transferring its mark onto the wall. These drawings remind me of the tracery of prairie grasses against a field of winter snow. Rockburne mentions how much she loved the lines of the modified white parachute that Robert Rauschenberg wore on his back in <em>Pelican</em> (1963), his first performance piece.</p>
+<p>At Black Mountain College in 1950, Rockburne studied with Max Dehn, a mathematician who came to the United States as a refugee of Nazi Germany. Teaching &#8220;mathematics for artists&#8221; Rockburne credits him with igniting her lifelong pursuit of math and her efforts to develop a language of visual equivalencies. It should be noted that Rockburne does not believe that viewers of her work must be learned experts in math, because the experience of the work is ultimately visual, emotional and physical. Nevertheless, Rockburne herself <em>does the math</em>, as I witnessed when she pulled out a stack of equation-packed math notebooks from her studio bookshelf. &#8220;This is what <em>I</em> did late at night when all the guys were out partying!&#8221;</p>
+<div id="attachment_80285" style="width: 285px" class="wp-caption alignleft"><a href="https://www.artcritical.com/wp-content/uploads/2019/01/Egyptian-Painting_-Scribe-1979.-gesso-oil-paint-on-linen-glue-pencil-93-x-56.5-inches.jpg" rel="attachment wp-att-80285"><img aria-describedby="caption-attachment-80285" loading="lazy" class="size-medium wp-image-80285" src="https://www.artcritical.com/wp-content/uploads/2019/01/Egyptian-Painting_-Scribe-1979.-gesso-oil-paint-on-linen-glue-pencil-93-x-56.5-inches-275x367.jpg" alt="Dorothea Rockburne, Egyptian Painting: Scribe. 1979. Conte, pencil, oil, gesso on linen. 93 x 56 1/2 inches. Courtesy the artist" width="275" height="367" srcset="https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/Egyptian-Painting_-Scribe-1979.-gesso-oil-paint-on-linen-glue-pencil-93-x-56.5-inches-275x367.jpg 275w, https://artcritical-uploads.s3.amazonaws.com/uploads/2019/01/Egyptian-Painting_-Scribe-1979.-gesso-oil-paint-on-linen-glue-pencil-93-x-56.5-inches.jpg 375w" sizes="(max-width: 275px) 100vw, 275px" /></a><p id="caption-attachment-80285" class="wp-caption-text">Dorothea Rockburne, Egyptian Painting: Scribe. 1979. Conte, pencil, oil, gesso on linen. 93 x 56 1/2 inches. Courtesy the artist</p></div>
+<p>In the <em>Golden Section Paintings</em>, and the <em>Egyptian Paintings</em> Rockburne prepared her surfaces with chalk ground and gesso. She sees, in the rigor of construction, an expression of the unchanging proportions of beauty described by the Golden Mean, articulated in the temples of Pythagoras, and in the timelessness of abstraction in painting. Unrelenting in her process of refinement, she understands the limitations that time imposes on her vision. &#8220;My idea of divinity is that I am in this form only temporarily.&#8221;</p>
+<p>When Greece was the superpower of the Mediterranean, Pythias (the Oracle at Delphi) answered inquiries about everything from the timing of a farmer&#8217;s cultivation to shifts in political power and natural disasters. Delphi as a result became the most important and wealthy shrine in Greece. To me, another form of wealth is the capacity that we have to perceive, limb by limb and to retrieve, effort by effort, the secrets of our universe.</p>
+<p>At dusk, we gather our belongings to leave Dia: Beacon. A flock of swallows flies past the clerestory windows, casting brief shadows against a wall. The squeal of a power drill cuts through from an adjacent gallery. A preparator is staging the space for the return of Andy Warhol&#8217;s monumental work <em>Shadows </em>(1978-79) after a long absence. Eye&#8217;s flashing, Dorothea Rockburne says: &#8220;Good timing.&#8221;</p>
+<br style="clear:both">	
+<span class='st_facebook_buttons' st_title='&#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon' st_url='http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/' displayText='share'></span><span class='st_twitter_buttons' st_title='&#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon' st_url='http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/' displayText='share'></span><span class='st_email_buttons' st_title='&#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon' st_url='http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/' displayText='share'></span><span class='st_plusone_buttons' st_title='&#8220;The Substance of Art&#8221;: Dorothea Rockburne in Beacon' st_url='http://artcritical.test/2019/01/25/rebecca-allan-on-dorothea-rockburne/' displayText='share'></span><span class='print'><a href="#" onclick="window.print();return false;">print</a> </span>
+<br style="clear:both">
+<div class="dottedline">&nbsp;</div>
+</div>
+</div>
+<div id="comments">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Share your thoughts <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2019/01/25/rebecca-allan-on-dorothea-rockburne/#respond" style="display:none;">Cancel reply</a></small></h3><form action="http://artcritical.test/wp/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='80281' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+</div><!-- #comments -->
+</div>
+<!-- sidebar -->
+<div id="sidebar">
+<!-- <div id="ad"><img src="http://artcritical.test/app/themes/artcritical/images/ad.png"></div> -->
+</div>
+<br style="clear:both">
+<!-- footer -->
+<div id="footer">
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16940579-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<hr class="color_artworld">
+<hr class="color_departments">
+<div id="footer_info">
+<div id="logo"><a href="http://artcritical.test/wp"><img src="http://artcritical.test/app/themes/artcritical/images/logo-red.png"></div>
+<div id="footermenu">
+<div id="criticism" class="block">
+<strong>Criticism</strong>
+<a href="http://artcritical.test/category/criticism/exhibitions/">Exhibitions</a>
+<a href="http://artcritical.test/category/criticism/books/">Books</a>
+<a href="http://artcritical.test/category/criticism/film-music-performance/">Film/Music/Performance</a>
+<a href="http://artcritical.test/category/criticism/dispatches/">Dispatches</a>
+<a href="http://artcritical.test/category/criticism/cyber/">Internet and Cyber Projects</a>
+<a href="http://artcritical.test/category/criticism/architecture/">Architecture and Design</a>
+</div>
+<div id="features" class="block">
+<strong>Features</strong>
+<a href="http://artcritical.test/category/features/feature-articles/">Commentary</a>
+<a href="http://artcritical.test/category/features/studio-visits/">Studio visits</a>
+<a href="http://artcritical.test/category/features/roundtable/">Roundtable</a>
+<a href="http://artcritical.test/category/features/capsules/">a featured item from THE LIST</a>
+<a href="http://artcritical.test/category/features/poetry-for-art/">Poetry For Art</a>
+<a href="http://artcritical.test/category/features/bookmarked/">Bookmarked</a>
+<a href="http://artcritical.test/category/features/essay/">Essay</a>
+<a href="http://artcritical.test/category/features/extract/">extract</a>
+</div>
+<div id="artworld" class="block">
+<strong>Artworld</strong>
+<a href="http://artcritical.test/category/artworld/newsdesk/">Newsdesk</a>
+<a href="http://artcritical.test/category/artworld/out-and-about/">Out and About</a>
+<a href="http://artcritical.test/category/artworld/art-business/">Art Business</a>
+<a href="http://artcritical.test/category/artworld/tributes/">Tributes</a>
+<a href="http://artcritical.test/category/artworld/art-fairs/">Art Fairs</a>
+<a href="http://artcritical.test/category/artworld/frieze-week-2018/">Frieze Week 2018</a>
+<a href="http://artcritical.test/category/artworld/miami-2018/">Miami 2018</a>
+</div>
+<div id="artworld" class="block">
+<strong>Departments</strong>
+<a href="http://artcritical.test/category/departments/welcome-to-this-issue/">Welcome to this Issue</a>
+<a href="http://artcritical.test/category/departments/editorial/">Editorial</a>
+<a href="http://artcritical.test/category/departments/competitions/">Competitions</a>
+<a href="http://artcritical.test/category/departments/recipes/">Recipes</a>
+<a href="http://artcritical.test/category/departments/pics/">Pics</a>
+<a href="http://artcritical.test/category/departments/tips/">Tips</a>
+<a href="http://artcritical.test/category/departments/hubs/">Hubs</a>
+</div>
+<div id="reviewpanel" class="block">
+<strong>The Review Panel</strong>
+<a href="http://artcritical.test/2020/09/11/review-panel-returns-via-zoom/">The Review Panel Returns, via Zoom</a>
+<a href="http://testingartcritical.com/category/departments/the-review-panel">Archive</a>
+</div>
+<div id="etc" class="block" style="margin-right:0">
+<strong>Etc.</strong>
+<a href="http://artcritical.test/browse">Archive</a>
+<a href="http://artcritical.test/calendar">Listings</a>
+<a href="http://artcritical.test/bulletin">Bulletin</a>
+<a href="http://artcritical.test/about">About Us</a> 
+<a href="http://artcritical.test/advertise" >Advertise</a>
+</div>
+<br style="clear:both">
+</div>
+<div id="feeds">
+<ul>
+<li><strong>RSS</strong></li><br>
+<li><a href="http://artcritical.test/feed/">Main Feed</a></li>
+<li><a href="http://artcritical.test/category/criticism/exhibitions/feed/">Exhibition Reviews</a></li>
+<li><a href="http://feeds.soundcloud.com/users/soundcloud:users:147412095/sounds.rss">Podcast</a></li>
+<ul>
+</div>
+<div id="info">
+For letters to the editor and all other correspondence, please write to editorial@artcritical.com
+"artcritical," "artcritical.com" and "The Review Panel" (c) artcritical, LLC 2003-2010
+</div>
+</div>
+</div>
+</div>
+</body>
+</html><!-- WP Fastest Cache file was created in 1.6228981018066 seconds, on 12-11-20 11:45:10 -->
