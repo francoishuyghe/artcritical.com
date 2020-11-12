@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7af1efceed04180d0d926bec2c260fc0",
+    "content-hash": "c0c9955636602e1f0c53bb286d24c04d",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -1508,6 +1508,42 @@
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
         },
         {
+            "name": "wpackagist-plugin/akismet",
+            "version": "4.1.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/akismet/",
+                "reference": "tags/4.1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.4.1.7.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/akismet/"
+        },
+        {
+            "name": "wpackagist-plugin/disqus-comment-system",
+            "version": "3.0.17",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disqus-comment-system/",
+                "reference": "tags/3.0.17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disqus-comment-system.3.0.17.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disqus-comment-system/"
+        },
+        {
             "name": "wpackagist-plugin/duplicate-post",
             "version": "3.2.6",
             "source": {
@@ -1526,6 +1562,24 @@
             "homepage": "https://wordpress.org/plugins/duplicate-post/"
         },
         {
+            "name": "wpackagist-plugin/simple-history",
+            "version": "2.37.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/simple-history/",
+                "reference": "tags/2.37.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-history.2.37.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simple-history/"
+        },
+        {
             "name": "wpackagist-plugin/social-warfare",
             "version": "4.1.0",
             "source": {
@@ -1542,6 +1596,60 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/social-warfare/"
+        },
+        {
+            "name": "wpackagist-plugin/soundcloud-shortcode",
+            "version": "3.0.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/soundcloud-shortcode/",
+                "reference": "tags/3.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/soundcloud-shortcode.3.0.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/soundcloud-shortcode/"
+        },
+        {
+            "name": "wpackagist-plugin/user-photo",
+            "version": "0.9.10",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/user-photo/",
+                "reference": "tags/0.9.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/user-photo.0.9.10.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/user-photo/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-23-related-posts-plugin",
+            "version": "3.6.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-23-related-posts-plugin/",
+                "reference": "tags/3.6.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-23-related-posts-plugin.3.6.5.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-23-related-posts-plugin/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
@@ -1578,6 +1686,42 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-fastest-cache/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-paginate",
+            "version": "2.1.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-paginate/",
+                "reference": "tags/2.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-paginate.2.1.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-paginate/"
+        },
+        {
+            "name": "wpackagist-plugin/wpfront-user-role-editor",
+            "version": "2.14.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wpfront-user-role-editor/",
+                "reference": "tags/2.14.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wpfront-user-role-editor.2.14.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wpfront-user-role-editor/"
         }
     ],
     "packages-dev": [
