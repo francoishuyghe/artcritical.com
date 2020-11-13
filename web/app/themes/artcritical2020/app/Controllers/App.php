@@ -30,4 +30,41 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public static function get_myauthor_link($name){
+        $base = get_option('siteurl');
+        return $base."/author/".$name;
+    }
+
+    public static function postimage($size = 'medium', $return = 'url') {
+
+        global $post;
+        $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $size, false, '' );
+        
+        if(!empty($src[0]) && $return !== 'image'){
+            return $src[0];	
+        }else{
+            if ( $images = get_children(array(
+                'post_parent' => get_the_ID(),
+                'post_type' => 'attachment',
+                'numberposts' => 1,
+                'post_mime_type' => 'image',)))
+            {
+                foreach( $images as $image ) {
+                    $attachmenturl=wp_get_attachment_url($image->ID);
+                    $attachmentimage=wp_get_attachment_image( $image->ID, $size );
+                    //$image = wp_get_attachment_image_src($image->ID, $size, false); 
+    
+                    if($return == 'url'){
+                        return $attachmenturl;
+                    }else{
+                        return $attachmentimage;	
+                    }
+    
+                }
+            }else{
+                return false;
+            }
+        }
+    }
 }

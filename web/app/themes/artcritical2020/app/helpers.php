@@ -136,3 +136,52 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+
+// OLD Functions
+function get_fronttop3_excerpt($limit = 17){
+	$textcontent = get_the_excerpt();
+	$content = apply_filters('the_content', $textcontent);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	$words = explode(' ', strip_tags($content));
+	return implode(' ', array_slice($words, 0, $limit))."...";
+}
+
+function get_newsletter_excerpt(){
+	$textcontent = get_the_excerpt();
+	$content = apply_filters('the_content', $textcontent);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	$words = explode(' ', strip_tags($content));
+	return implode(' ', array_slice($words, 0, 50));
+}
+
+function get_top3_excerpt(){
+	$textcontent = get_the_excerpt();
+	$content = apply_filters('the_content', $textcontent);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	$words = explode(' ', strip_tags($content));
+	return implode(' ', array_slice($words, 0, 40))."...";
+}
+function get_cat_slug($cat_id) {
+	$cat_id = (int) $cat_id;
+	$category = get_category($cat_id);
+	return $category->slug;
+}
+
+function get_archive_link($category){
+	$base = get_option('siteurl');
+	$categoryparent = get_cat_slug($category->parent);
+	return $base."/category/".$categoryparent."/".$category->slug."/";
+}
+
+function get_venue_link($id){
+	$title = get_the_title($id);
+	$link = get_permalink($id);
+	return "<a href=\"$link\">".$title."</a>";
+}
+
+function remove_podpress_from_automatic_excerpts() {
+    /* This function removes podPress elements from post content on the homepage of the blog. It helps especially if the home page shows only excerpts of the posts.*/
+    global $podPress;
+    remove_filter('the_content', array($podPress, 'insert_content'));
+}

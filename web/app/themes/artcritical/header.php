@@ -1,14 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-
-   "http://www.w3.org/TR/html4/strict.dtd">
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="en" ng-app="artCritical" >
-
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title><?php wp_title('/', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 
@@ -29,16 +25,8 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/functions.js" type="text/javascript"></script>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.4.0/coffee-script.min.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.4.0/coffee-script.min.js"></script> -->
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/app.js"></script>
-    
-
-
-	
-
-
 
 </head>
 

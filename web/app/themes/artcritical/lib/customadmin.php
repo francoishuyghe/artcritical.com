@@ -208,16 +208,6 @@ $coverargs = array(
 
 sd_register_post_type( 'cover' , $coverargs);
 
-
-
-
-add_action('admin_enqueue_scripts', 'poll_scripts_admin');
-function poll_scripts_admin($hook_suffix) {
-	?>
-	<?php
-	wp_enqueue_script('jqueryuidatepicker', '/wp-content/plugins/events-calendar/js/ui.datepicker.js', 1);
-}
-
 add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
 
