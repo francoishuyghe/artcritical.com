@@ -84,21 +84,10 @@ $count = 1;
 		</div>
 		<div id="cover_info">
 			<div id="coverdescription">
-										<div id="cover_image" style="background-image: url('<?php echo "$coverpicurl[0]";?>');"></div>
-										<?php echo nl2br($coverdescription)?><br><br>
-									</div>
-									<a href="javascript:expand_cover();" id="fullimage">View Full Image &#x25B6;</a>
-						<!-- begin 300x250 Top Artcritical -->
-						<!-- <div id="vulture300x250">
-												<script language="JavaScript" type="text/javascript">
-												window.dctile = Number(window.dctile) + 1 || 1;
-												window.dc_ord = Number(window.dc_ord) || Math.floor(Math.random() * 1E10);
-												if (dctile==1) {var vdcopt = 'ist';} else {vdcopt = '';}
-												if (17>dctile) document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/nym.vulturenetwork.artcritical/Homepage;dcopt=' + vdcopt + ';tile=' + dctile + ';sz=300x250;ord=' + dc_ord + '?"><\/script>\n');
-												</script>
-												<noscript><a href="http://ad.doubleclick.net/jump/nym.vulturenetwork.artcritical/Homepage;sz=300x250;ord=123456789?"><img src="http://ad.doubleclick.net/ad/nym.vulturenetwork.artcritical/Homepage;sz=300x250;ord=123456789?" border="0"></a></noscript>
-												</div> -->
-						<!-- End ad tag -->
+				<div id="cover_image" style="background-image: url('<?php echo "$coverpicurl[0]";?>');"></div>
+				<?php echo nl2br($coverdescription)?><br><br>
+			</div>
+			<a href="javascript:expand_cover();" id="fullimage">View Full Image &#x25B6;</a>
 		</div>
 	</div>
 	<div style="clear:both">&nbsp;</div>

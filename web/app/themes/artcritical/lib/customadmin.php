@@ -205,59 +205,8 @@ $coverargs = array(
 	'query_var' => 'cover',
 	'supports' => array('title', 'thumbnail', 'editor', 'excerpt')
 );
-$listingargs = array(
-	'label' => __('Listings'),
-	'singular_label' => __('Listing'),
-	'public' => true,
-	'show_ui' => true,
-	'_edit_link' => 'post.php?post=%d',
-	'capability_type' => 'page',
-	'hierarchical' => false,
-	'rewrite' => true,
-	'query_var' => 'listing',
-	'supports' => array('title', 'thumbnail', 'excerpt')
-);
-$venueargs = array(
-	'label' => __('Venues'),
-	'singular_label' => __('Venue'),
-	'public' => true,
-	'show_ui' => true,
-	'_edit_link' => 'post.php?post=%d',
-	'capability_type' => 'page',
-	'hierarchical' => false,
-	'rewrite' => true,
-	'query_var' => 'venue',
-	'supports' => array('title', 'thumbnail')
-);
-$neighborhoodargs = array( 
-	'hierarchical' => 0, 
-	'label' => 'Neighborhood',
-	'show_ui' => '1',
-	'query_var' => 'neighborhood',
-	'rewrite' => '1',
-	'singular_label' => 'Neighborhood'
-);
-$areaargs = array( 
-	'hierarchical' => 0, 
-	'label' => 'Area',
-	'show_ui' => '1',
-	'query_var' => 'Area',
-	'rewrite' => '1',
-	'singular_label' => 'Area'
-);
-$artistsargs = array( 
-	'hierarchical' => 0, 
-	'label' => 'Artist(s)',
-	'show_ui' => '1',
-	'query_var' => 'artists',
-	'rewrite' => '1',
-	'singular_label' => 'Artist(s)'
-);
 
 sd_register_post_type( 'cover' , $coverargs);
-sd_register_post_type( 'listing' , $listingargs);
-sd_register_post_type( 'venue' , $venueargs);
-register_taxonomy('neighborhoods', 'venue', $neighborhoodargs);
 
 
 

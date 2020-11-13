@@ -27,7 +27,7 @@ $args = array(
 	'posts_per_page' => 3
 );
 $count = 0;
-$category = &get_category($cat_id);
+$category = get_category($cat_id);
 $categoryparent = get_cat_slug($category->parent);
 $n_posts = array();
 query_posts($args);

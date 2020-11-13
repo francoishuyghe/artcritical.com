@@ -127,17 +127,7 @@ get_header();
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZzR7hbFKiOIFDuTi8DI5Csrn3K0vFJdc&callback=initMap">
     </script>
-    
-    
-
-    
-
-		
-		
+    		
 </div>
-
-<?php //get_sidebar('listings'); ?>
-
-
 
 <?php get_footer(); ?>

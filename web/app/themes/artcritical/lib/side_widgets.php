@@ -1,14 +1,19 @@
 <?php
+add_action( 'widgets_init', function(){
+	register_sidebar(array(
+		'name' => 'Front Page / Column 1',
+		'id'            => 'column1',
+		'description' => 'This is to organize the front page column #1 (1st column from the left).', 
+		'before_widget' => '<div id="%1$s" class="frontwidget %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<div id="sidebarheader"><h2>',
+		'after_title' => '</h2></div>')
+	);
+
+
 register_sidebar(array(
-	'name' => 'Front Page / Column 1', 
-	'description' => 'This is to organize the front page column #1 (1st column from the left).', 
-	'before_widget' => '<div id="%1$s" class="frontwidget %2$s">',
-	'after_widget' => "</div>",
-	'before_title' => '<div id="sidebarheader"><h2>',
-	'after_title' => '</h2></div>')
-);
-register_sidebar(array(
-	'name' => 'Front Page / Column 2', 
+	'name' => 'Front Page / Column 2',
+	'id'            => 'column2',
 	'description' => 'This is to organize the front page column #2 (2nd column from the left).', 
 	'before_widget' => '<div id="%1$s" class="frontwidget %2$s">',
 	'after_widget' => "</div>",
@@ -16,18 +21,8 @@ register_sidebar(array(
 	'after_title' => '</h2></div>')
 );
 
-$ad = "<div id=\"vulture300x250\">
-<script language=\"JavaScript\" type=\"text/javascript\">
-window.dctile = Number(window.dctile) + 1 || 1;
-window.dc_ord = Number(window.dc_ord) || Math.floor(Math.random() * 1E10);
-if (dctile==1) {var vdcopt = 'ist';} else {vdcopt = '';}
-if (17>dctile) document.write('<script type=\"text/javascript\" src=\"http://ad.doubleclick.net/adj/nym.vulturenetwork.artcritical/Homepage;dcopt=' + vdcopt + ';tile=' + dctile + ';sz=300x250;ord=' + dc_ord + '?\"><\/script>\n');
-</script>
-<noscript><a href=\"http://ad.doubleclick.net/jump/nym.vulturenetwork.artcritical/Homepage;sz=300x250;ord=123456789?\"><img src=\"http://ad.doubleclick.net/ad/nym.vulturenetwork.artcritical/Homepage;sz=300x250;ord=123456789?\" border=\"0\"></a></noscript>
-</div>";
-
 register_sidebar(array(
-	'name' => 'Front Page / Column 3', 
+	'id'            => 'column3',
 	'description' => 'This is to organize the front page column #3 (3rd column from the left).', 
 	'before_widget' => '<div id="%1$s" class="frontwidget %2$s">',
 	'after_widget' => "</div>",
@@ -35,7 +30,8 @@ register_sidebar(array(
 	'after_title' => '</h2></div>')
 );
 register_sidebar(array(
-	'name' => 'Single Sidebar', 
+	'name' => 'Single Sidebar',
+	'id' => 'single',
 	'description' => 'This is the sidebar for the single story page.', 
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget' => "</div>",
@@ -43,7 +39,8 @@ register_sidebar(array(
 	'after_title' => '</h2></div>')
 );
 register_sidebar(array(
-	'name' => 'Review Panel Sidebar', 
+	'name' => 'Review Panel Sidebar',
+	'id' => 'reviewpanel',
 	'description' => 'This is the sidebar for the single story page.', 
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget' => "</div>",
@@ -52,6 +49,7 @@ register_sidebar(array(
 );
 register_sidebar(array(
 	'name' => 'Conduit Sidebar', 
+	'id' => 'category',
 	'description' => 'This is the sidebar that will appear on sub category pages archive, About Us page, search results, author pages, etc.', 
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget' => "</div>",
@@ -60,53 +58,22 @@ register_sidebar(array(
 );
 register_sidebar(array(
 	'name' => 'Listings Sidebar', 
+	'id' => 'listing',
 	'description' => 'This is the sidebar that will appear on the Listings and Calendar Page.', 
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget' => "</div>",
 	'before_title' => '<div id="sidebarheader"><h2>',
 	'after_title' => '</h2></div>')
 );
-
-// register_sidebar(array(
-// 	'name' => 'Index Sidebar', 
-// 	'description' => 'This is the sidebar for the site front page.', 
-// 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-// 	'after_widget' => "</div>",
-// 	'before_title' => '<div id="sidebarheader"><h2>',
-// 	'after_title' => '</h2></div>')
-// );
-// register_sidebar(array(
-// 	'name' => 'Search Sidebar', 
-// 	'description' => 'This is the sidebar that will appear on the search page.', 
-// 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-// 	'after_widget' => "</div>",
-// 	'before_title' => '<div id="sidebarheader"><h2>',
-// 	'after_title' => '</h2></div>')
-// );
-// register_sidebar(array(
-// 	'name' => 'Author Sidebar', 
-// 	'description' => 'This is the sidebar that will appear on the author homepage.', 
-// 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-// 	'after_widget' => "</div>",
-// 	'before_title' => '<div id="sidebarheader"><h2>',
-// 	'after_title' => '</h2></div>')
-// );
-// register_sidebar(array(
-// 	'name' => 'Listings Sidebar', 
-// 	'description' => 'This is the sidebar that will appear on the listings page.', 
-// 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-// 	'after_widget' => "</div>",
-// 	'before_title' => '<div id="sidebarheader"><h2>',
-// 	'after_title' => '</h2></div>')
-// );
+});
 
 // WIDGETS!
 
 class authorWidget extends WP_Widget {
     /** constructor */
-    function authorWidget() {
+    function __construct() {
 		$widget_ops = array('description' => 'This widget will display the 4 most recent posts by the same author on a single article page.');
-        $this->WP_Widget(false, __('Posts by author (article page)'), $widget_ops);	
+        parent::__construct(false, __('Posts by author (article page)'), $widget_ops);	
     }
 
     /** @see WP_Widget::widget */
@@ -150,9 +117,9 @@ class authorWidget extends WP_Widget {
 }
 class categoryWidget extends WP_Widget {
     /** constructor */
-    function categoryWidget() {
+    function __construct() {
 		$widget_ops = array('description' => 'This widget will display the 4 most recent posts in the same category as the article on a single article page.');
-		$this->WP_Widget(false, __('Posts in category'), $widget_ops);
+		parent::__construct(false, __('Posts in category'), $widget_ops);
     }
 
     /** @see WP_Widget::widget */
@@ -196,16 +163,16 @@ class categoryWidget extends WP_Widget {
 }
 class frontCategoryWidget extends WP_Widget {
     /** constructor */
-    function frontCategoryWidget() {
+    function __construct() {
 		$widget_ops = array('description' => 'This widget will display the most recent posts in the category chosen.');
-		$this->WP_Widget(false, __('Front Category'), $widget_ops);
+		parent::__construct(false, __('Front Category'), $widget_ops);
     }
 
     /** @see WP_Widget::widget */
     function widget($args, $instance) {	
 		$title = esc_attr($instance['title']);
 		$num_posts = esc_attr($instance['num_posts']);
-		$suggested = esc_attr($instance['suggested']);
+		//$suggested = esc_attr($instance['suggested']);
 		$cat = get_cat_ID($title);
 		$color = get_category_parents($cat, FALSE, ".", TRUE);
 		$color = explode(".", $color);
@@ -281,9 +248,9 @@ class frontCategoryWidget extends WP_Widget {
 }
 class messageWidget extends WP_Widget {
     /** constructor */
-    function messageWidget() {
+    function __construct() {
 		$widget_ops = array('description' => 'This is used display a custom message (announcements, updates, etc).');
-		$this->WP_Widget(false, __('Message'), $widget_ops);
+		parent::__construct(false, __('Message'), $widget_ops);
     }
 
     /** @see WP_Widget::widget */
@@ -318,9 +285,9 @@ class messageWidget extends WP_Widget {
 	}
 class tabWidget extends WP_Widget {
     /** constructor */
-    function tabWidget() {
+    function __construct() {
 		$widget_ops = array('description' => 'This widget will display related posts (calculated by tags) and suggested posts (set manually by editor/poster).');
-		$this->WP_Widget(false, __('Related / Suggested / Recent'), $widget_ops);
+		parent::__construct(false, __('Related / Suggested / Recent'), $widget_ops);
     }
 
     /** @see WP_Widget::widget */
@@ -378,11 +345,12 @@ class tabWidget extends WP_Widget {
 	}
 	
 }
+
 class archivetabWidget extends WP_Widget {
     /** constructor */
-    function archivetabWidget() {
+    function __construct() {
 		$widget_ops = array('description' => 'This widget will display recent posts in the same category and suggested posts (set manually by editor/poster).');
-		$this->WP_Widget(false, __('Recent / Suggested (archive)'), $widget_ops);
+		parent::__construct(false, __('Recent / Suggested (archive)'), $widget_ops);
     }
 
     /** @see WP_Widget::widget */
@@ -457,9 +425,9 @@ class archivetabWidget extends WP_Widget {
 }
 class authortabWidget extends WP_Widget {
     /** constructor */
-    function authortabWidget() {
+    function __construct() {
 		$widget_ops = array('description' => 'This widget will display recent posts in the same category and suggested posts.');
-		$this->WP_Widget(false, __('Recent / Suggested (author)'), $widget_ops);
+		parent::__construct(false, __('Recent / Suggested (author)'), $widget_ops);
     }
 
     /** @see WP_Widget::widget */

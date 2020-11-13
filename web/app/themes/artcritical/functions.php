@@ -3,29 +3,15 @@
  * @package WordPress
  * @subpackage Default_Theme
  */
-//include 'lib/side_widgets.php';
+
+include 'lib/side_widgets.php';
 include 'lib/functions.php';
 include 'lib/customadmin.php';
 add_theme_support( 'post-thumbnails' );
 add_image_size('featured_inside', 275, 205, true);
 add_image_size('featured_front', 370, 324, true);
 
-// add_filter('query_vars', 'parameter_queryvars' );
-// function parameter_queryvars( $qvars ){
-// 	$qvars[] = 'tag';
-// 	return $qvars;
-// }
-
 update_option('image_default_link_type','file');
-
-
-function my_scripts() {
-	
-	
-}
-
-add_action( 'wp_enqueue_scripts', 'my_scripts' );
-
 
 //Link Review Panel Widget to categories
 function add_template_category($t){

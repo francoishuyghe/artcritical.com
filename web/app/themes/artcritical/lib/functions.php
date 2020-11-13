@@ -14,7 +14,7 @@ function post_strip($where) {
 	$where .= " AND $wpdb->posts.ID not in($featuredposts) "; 
 	return $where;
 }
-function postimage($size = medium, $return = 'url') {
+function postimage($size = 'medium', $return = 'url') {
 	global $post;
 	$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $size, false, '' );
 	
@@ -70,7 +70,7 @@ function get_top3_excerpt(){
 }
 function get_cat_slug($cat_id) {
 	$cat_id = (int) $cat_id;
-	$category = &get_category($cat_id);
+	$category = get_category($cat_id);
 	return $category->slug;
 }
 
