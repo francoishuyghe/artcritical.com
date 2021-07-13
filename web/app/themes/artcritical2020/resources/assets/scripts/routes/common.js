@@ -2,92 +2,11 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
-    var DDSPEED = 5;
-var DDTIMER = 25;
-
-// main function to handle the mouse events //
-function ddMenu(id, d){
-  var h = document.getElementById(id + '-ddheader');
-  var c = document.getElementById(id + '-ddcontent');
-  clearInterval(c.timer);
-  if(d == 1){
-    clearTimeout(h.timer);
-    if(c.maxh && c.maxh <= c.offsetHeight){return}
-    else if(!c.maxh){
-      c.style.display = 'block';
-      c.style.height = 'auto';
-      c.maxh = c.offsetHeight;
-      c.style.height = '0px';
-    }
-    c.timer = setInterval(function(){ddSlide(c,1)},DDTIMER);
-  }else{
-    h.timer = setTimeout(function(){ddCollapse(c)},50);
-  }
-}
-
-// collapse the menu //
-function ddCollapse(c){
-  c.timer = setInterval(function(){ddSlide(c,-1)},DDTIMER);
-}
-
-// cancel the collapse if a user rolls over the dropdown //
-function cancelHide(id){
-  var h = document.getElementById(id + '-ddheader');
-  var c = document.getElementById(id + '-ddcontent');
-  clearTimeout(h.timer);
-  clearInterval(c.timer);
-  if(c.offsetHeight < c.maxh){
-    c.timer = setInterval(function(){ddSlide(c,1)},DDTIMER);
-  }
-}
-
-// incrementally expand/contract the dropdown and change the opacity //
-function ddSlide(c,d){
-  var currh = c.offsetHeight;
-  var dist;
-  if(d == 1){
-    dist = (Math.round((c.maxh - currh) / DDSPEED));
-  }else{
-    dist = (Math.round(currh / DDSPEED));
-  }
-  if(dist <= 1 && d == 1){
-    dist = 1;
-  }
-  c.style.height = currh + (dist * d) + 'px';
-  c.style.opacity = currh / c.maxh;
-  c.style.filter = 'alpha(opacity=' + (currh * 99 / c.maxh) + ')';
-  if((currh < 2 && d != 1) || (currh > (c.maxh - 2) && d == 1)){
-    clearInterval(c.timer);
-  }
-}
-
 var expanded = new Array();
 
 function tag_expand(tag, tagname){
 	if(expanded[tag] == null || expanded[tag] == 'false'){
 		new Ajax.Updater(tag + '_results','/tag.php',{
-			onLoading:function(request){
-				$(tag + '_loading').toggle();
-			},
-			onComplete:function(request){
-				$(tag + '_loading').toggle();
-				Effect.BlindDown(tag + '_results', {duration: 0.8});
-				expanded[tag] = 'true';
-			}, 
-			parameters: {
-				post_tag: tag,
-				post_tag_name: tagname,
-			}, evalScripts:true, asynchronous:true
-		});	
-	}else{
-		Effect.BlindUp(tag + '_results', {duration: 0.8});
-		expanded[tag] = 'false';
-	}
-	
-}
-function neighborhood_expand(tag, tagname){
-	if(expanded[tag] == null || expanded[tag] == 'false'){
-		new Ajax.Updater(tag + '_results','http://testingartcritical.com/neighborhood.php',{
 			onLoading:function(request){
 				$(tag + '_loading').toggle();
 			},
@@ -169,46 +88,36 @@ var count = 2;
 function tab_rotate(){
 	feature_tab(count);
 }
+		let menuTimer;
 
-jQuery(document).ready(function() {  
+		// main function to handle the mouse events //
+		$('.ddheader').on('mouseover', function (e) {
+			var h = $(e.target);
+			var c = $('#' + h.attr('id') + '-ddcontent');
+				if (c.maxh && c.maxh <= c.offsetHeight) { return }
+				else if (!c.maxh) {
+					$('.ddcontent').removeClass('active')
+					c.addClass('active');
+				}
+		});
+		
+		$('.ddheader').on('mouseout', function (e) {
+			var h = $(e.target);
+			var c = $('#' + h.attr('id') + '-ddcontent');
+			menuTimer = setTimeout(function () {
+				c.removeClass('active')
+			}, 10);
+		});
   
-    //Select all anchor tag with rel set to tooltip  
-    jQuery('span[rel=tooltip]').mouseover(function(e) {  
-          
-        //Grab the title attribute's value and assign it to a variable  
-        var tip = jQuery(this).attr('title');      
-          
-        //Remove the title attribute's to avoid the native tooltip from the browser  
-        jQuery(this).attr('title','');  
-          
-        //Append the tooltip template and its value  
-        jQuery(this).append('<div id="tooltip"><div class="tipHeader"></div><div class="tipBody">' + tip + '</div><div class="tipFooter"></div></div>');       
-          
-        //Set the X and Y axis of the tooltip  
-        jQuery('#tooltip').css('top', e.pageY + 10 );  
-        jQuery('#tooltip').css('left', e.pageX + 20 );  
-          
-        //Show the tooltip with faceIn effect  
-        jQuery('#tooltip').fadeIn('500');  
-        jQuery('#tooltip').fadeTo('10',0.8);  
-          
-    }).mousemove(function(e) {  
-      
-        //Keep changing the X and Y axis for the tooltip, thus, the tooltip move along with the mouse  
-        jQuery('#tooltip').css('top', e.pageY + 10 );  
-        jQuery('#tooltip').css('left', e.pageX + 20 );  
-          
-    }).mouseout(function() {  
-      
-        //Put back the title attribute's value  
-        jQuery(this).attr('title',jQuery('.tipBody').html());  
-      
-        //Remove the appended tooltip template  
-        jQuery(this).children('div#tooltip').remove();  
-          
-    });  
-  
-});
+		$('.ddcontent').on('mouseenter mouseleave', function (e) {
+			if (e.type == 'mouseenter') {
+				clearTimeout(menuTimer);
+			} else {
+				console.log($(e.target));
+			$(e.target).closest('.ddcontent').removeClass('active');
+			 }
+		});
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

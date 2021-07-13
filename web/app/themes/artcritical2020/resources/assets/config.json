@@ -10,7 +10,7 @@
   },
   "publicPath": "/app/themes/artcritical2020",
   "devUrl": "http://artcritical.test",
-  "proxyUrl": "http://localhost:3000",
+  "proxyUrl": "http://localhost:3008",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

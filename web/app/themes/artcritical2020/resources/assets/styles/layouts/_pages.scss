@@ -1,0 +1,32 @@
+.home{
+    #columns{
+
+    }
+}
+
+.smallpost{
+    display: flex;
+    margin-bottom: $grid-gutter / 2;
+
+    .thumb{
+        width:70px;
+    }
+
+    .snippet{
+        padding-left: $grid-gutter / 3;
+    }
+
+    .date {
+        color:#7c7c7c;
+
+        .author{
+            text-transform:uppercase;
+        }
+    }
+
+    a{
+        color:#292929; 
+        text-decoration:none; 
+        font-weight:bold; 
+    }
+}

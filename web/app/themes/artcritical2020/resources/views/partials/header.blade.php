@@ -110,20 +110,22 @@
       ?>
       <div id="menu">
         <ul>
-                <li class="color_thelist menuitem-listing" id="thelist-ddheader" onmouseover="ddMenu('thelist',1)" onmouseout="ddMenu('thelist',-1)">The List</li>
-          <li class="color_criticism" id="criticism-ddheader" onmouseover="ddMenu('criticism',1)" onmouseout="ddMenu('criticism',-1)">Criticism</li>
-          <li class="color_features" id="features-ddheader" onmouseover="ddMenu('features',1)" onmouseout="ddMenu('features',-1)">Features</li>
-          <li class="color_artworld" id="artworld-ddheader" onmouseover="ddMenu('artworld',1)" onmouseout="ddMenu('artworld',-1)">Art World</li>
-          <li class="color_departments" id="departments-ddheader" onmouseover="ddMenu('departments',1)" onmouseout="ddMenu('departments',-1)">Departments</li>
-          <li class="color_reviewpanel" id="reviewpanel-ddheader" onmouseover="ddMenu('reviewpanel',1)" onmouseout="ddMenu('reviewpanel',-1)">The Review Panel</li>
+                <li class="ddheader color_thelist menuitem-listing" id="thelist">The List</li>
+          <li class="ddheader color_criticism" id="criticism" >Criticism</li>
+          <li class="ddheader color_features" id="features" >Features</li>
+          <li class="ddheader color_artworld" id="artworld" >Art World</li>
+          <li class="ddheader color_departments" id="departments">Departments</li>
+          <li class="ddheader color_reviewpanel" id="reviewpanel">The Review Panel</li>
         </ul>
-            <div class="tl_dropdown" id="thelist-ddcontent" onmouseover="cancelHide('thelist')" onmouseout="ddMenu('thelist',-1)" >
+
+        {{-- DROPDOWNS --}}
+        <div class="ddcontent tl_dropdown" id="thelist-ddcontent" >
           <a href="https://list.artcritical.com">Week at a Glance</a>
                 <a href="https://list.artcritical.com/current">Current</a>
                 <a href="https://list.artcritical.com/events">Lectures/Events</a>
         </div>
       
-        <div class="cr_dropdown" id="criticism-ddcontent" onmouseover="cancelHide('criticism')" onmouseout="ddMenu('criticism',-1)">
+        <div class="ddcontent cr_dropdown" id="criticism-ddcontent">
           <?
           $cats = wp_list_categories('orderby=&title_li=&style=none&hide_empty=0&child_of=11&echo=0');
           $cats = str_replace("<br />","",$cats);
@@ -132,7 +134,6 @@
           <div class="subhead">Regular writers include:</div>
           <div class="submenu">
           <?php
-          //CAST(`pm`.`meta_value` AS UNSIGNED)
           global $wpdb;
           $ud = $wpdb->get_results("SELECT * FROM $wpdb->users INNER JOIN $wpdb->usermeta ON ($wpdb->users.ID = $wpdb->usermeta.user_id) WHERE $wpdb->usermeta.meta_key = 'on_menu' AND $wpdb->usermeta.meta_value = 'on' ORDER BY $wpdb->usermeta.meta_value ASC");
           foreach($ud as $user){
@@ -146,21 +147,21 @@
           <a href="http://artcritical.com/browse/?tab=byauthor">More...</a>
           </div>
         </div>
-        <div class="fe_dropdown" id="features-ddcontent" onmouseover="cancelHide('features')" onmouseout="ddMenu('features',-1)" >
+        <div class="ddcontent fe_dropdown" id="features-ddcontent" >
           <?
           $cats = wp_list_categories('orderby=&title_li=&style=none&hide_empty=0&child_of=12&echo=0');
           $cats = str_replace("<br />","",$cats);
           echo $cats;
           ?>
         </div>
-        <div class="aw_dropdown" id="artworld-ddcontent" onmouseover="cancelHide('artworld')" onmouseout="ddMenu('artworld',-1)" >
+        <div class="ddcontent aw_dropdown" id="artworld-ddcontent">
           <?
           $cats = wp_list_categories('orderby=&title_li=&style=none&hide_empty=0&child_of=13&echo=0');
           $cats = str_replace("<br />","",$cats);
           echo $cats;
           ?>
         </div>
-        <div class="de_dropdown" id="departments-ddcontent" onmouseover="cancelHide('departments')" onmouseout="ddMenu('departments',-1)" >
+        <div class="ddcontent de_dropdown" id="departments-ddcontent">
           <?
           $cats = wp_list_categories('orderby=&title_li=&style=none&hide_empty=0&child_of=14&echo=0');
           $cats = str_replace("<br />","",$cats);
@@ -168,7 +169,7 @@
           ?>
           <a href="<?php bloginfo('url')?>/listings-week">The List</a>
         </div>
-        <div class="rp_dropdown" id="reviewpanel-ddcontent" onmouseover="cancelHide('reviewpanel')" onmouseout="ddMenu('reviewpanel',-1)" >
+        <div class="ddcontent rp_dropdown" id="reviewpanel-ddcontent">
                 <a href="<?php bloginfo('url')?>/subscribe">Newsletter</a>
           <?php
           $args = array(

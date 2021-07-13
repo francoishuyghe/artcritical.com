@@ -5,3 +5,152 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+.color_thelist{background:#d70b00;}
+.color_criticism{background:#b70a00;}
+.color_features{background:#9f0900;}
+.color_artworld{background:#990218}
+.color_departments{background:#8a0700}
+.color_reviewpanel{background:#770600;}
+
+#menu{ 
+  position: relative;;
+
+  ul{
+    display:inline;
+    margin: 0;
+    padding: 0;
+
+    li{
+      display:inline;
+      padding:10px 10px;
+      font-size:11pt;
+      text-transform:uppercase;
+      color:white;
+      line-height:0;
+      position: relative;
+      font-weight: 300;
+
+      a{
+        color:white;
+        text-decoration:none;
+      }
+    }
+  }
+}
+
+#topmenucontainer{
+  height:100px;
+  margin-top:10px;
+}
+
+#menucontainer{
+  height:50px;
+}
+
+.ddcontent{
+  display:none;
+  position:absolute; 
+  overflow:hidden; 
+  width:300px; 
+  background:#FFFFFF; 
+  top: 21px;
+  z-index:200; 
+  opacity:0;
+  color:black;
+  text-transform:uppercase;
+  margin-left:83px; 
+  margin-top:10px;
+	box-shadow: 2px 2px 2px #805050;
+
+  &.active{
+    opacity:1;
+    display: block;
+  }
+
+  a{
+    color:#b70a00;
+    display:block;
+    font-size:9px; 
+    padding:10px; 
+    text-decoration:none;
+  
+    &:hover{
+      background-color:#b70a00; 
+      color:white!important;
+    }
+  }
+
+  .subhead{
+    color:gray;
+    display:block;
+    font-size:9px; 
+    padding:10px; 
+    text-decoration:none; 
+    font-weight:bold;
+  }
+  
+  .submenu{
+    padding-left:20px;
+    text-decoration:none; 
+  }
+
+  &.fe_dropdown{
+    margin-left:176px;
+    a{
+      color:#9f0900;
+    
+      &:hover{
+        background-color:#9f0900; 
+      }
+    }
+  }
+
+  &.aw_dropdown{
+    margin-left:271px; 
+  
+    a{
+      color:#990218;
+  
+      &:hover{
+        background-color:#990218; 
+      }
+    }
+  }
+
+  &.de_dropdown{
+    margin-left:377px;
+  
+    .de_dropdown a{
+      color:#8a0700;
+  
+      &:hover{
+        background-color:#8a0700;
+      }
+    }
+  }
+
+  &.rp_dropdown{
+    margin-left:504px;
+  
+    a{
+      color:#770600;
+    
+      &:hover{
+        background-color:#770600;
+      }
+    }
+  }
+
+  &.tl_dropdown{
+    margin-left:0px; 
+    width:150px; 
+
+    a{
+      color:#d70b00;
+      &:hover{
+        background-color:#d70b00;
+      }
+    }
+  }
+}

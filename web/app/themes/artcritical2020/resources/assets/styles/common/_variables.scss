@@ -2,8 +2,11 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  primary: #525ddc
+  primary: #993333,
+  criticism: #993333,
 );
+
+$grid-gutter: 50px;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;

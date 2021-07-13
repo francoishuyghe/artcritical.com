@@ -165,7 +165,7 @@ function get_top3_excerpt(){
 function get_cat_slug($cat_id) {
 	$cat_id = (int) $cat_id;
 	$category = get_category($cat_id);
-	return $category->slug;
+	return $category->errors ? '' : $category->slug;
 }
 
 function get_archive_link($category){
@@ -185,3 +185,4 @@ function remove_podpress_from_automatic_excerpts() {
     global $podPress;
     remove_filter('the_content', array($podPress, 'insert_content'));
 }
+

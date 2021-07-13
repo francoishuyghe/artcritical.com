@@ -1,0 +1,21 @@
+.post{
+    header{
+        h1{
+            font-size: 2em;
+            color: theme-color(criticism);
+        }
+
+        .print a {
+            color: #999; 
+            font-size: .8em; 
+        }
+    }
+
+    .wp-block-image{
+        margin-bottom: $grid-gutter;
+    }
+
+    figcaption{
+        font-size: .8em;
+    }
+}
