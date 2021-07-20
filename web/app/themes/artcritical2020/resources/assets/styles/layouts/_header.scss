@@ -41,16 +41,21 @@
     }
 
     li{
+      position: relative;
       padding:10px 10px;
       margin-right: 5px;
       text-transform:uppercase;
       line-height: 1em;
-      position: relative;
       font-weight: 300;
       color:theme-color(white);
 
       &:hover{
         cursor: pointer;
+
+        .ddcontent{
+          display: block;
+          opacity: 1;
+        }
       }
       
       a{
@@ -124,7 +129,6 @@
 
   @include media-breakpoint-up(md){
     display: block;
-    margin-top:17px;
     padding-bottom: 0;
     box-shadow: none;
 
@@ -150,14 +154,14 @@
   overflow:hidden; 
   width:300px; 
   background:#FFFFFF; 
-  top: 21px;
+  bottom: 0;
+  left: 0;
   z-index:200; 
   opacity:0;
   color:black;
   text-transform:uppercase;
-  margin-left:83px; 
-  margin-top:10px;
 	box-shadow: 2px 2px 2px #805050;
+  transform: translateY(100%);
 
   &.active{
     opacity:1;
@@ -192,7 +196,6 @@
   }
 
   &.fe_dropdown{
-    margin-left:176px;
     a{
       color:#9f0900;
     
@@ -203,8 +206,6 @@
   }
 
   &.aw_dropdown{
-    margin-left:271px; 
-  
     a{
       color:#990218;
   
@@ -215,8 +216,6 @@
   }
 
   &.de_dropdown{
-    margin-left:377px;
-  
     .de_dropdown a{
       color:#8a0700;
   
@@ -227,8 +226,6 @@
   }
 
   &.rp_dropdown{
-    margin-left:504px;
-  
     a{
       color:#770600;
     
@@ -239,9 +236,7 @@
   }
 
   &.tl_dropdown{
-    margin-left:0px; 
     width:150px; 
-
     a{
       color:#d70b00;
       &:hover{

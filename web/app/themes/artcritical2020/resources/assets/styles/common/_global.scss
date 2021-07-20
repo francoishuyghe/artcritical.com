@@ -10,6 +10,10 @@ html {
 
         main.main{
             margin-top: 100px;
+            
+            @include media-breakpoint-up(md){
+                margin-top: 180px;
+            }
         }
     }
 }
@@ -416,10 +420,6 @@ span.clear { clear: left; display: block; }
     bottom: 0px;
 }
 
-#menu li:hover{
-    cursor: pointer;
-}
-
 #cover_image{
     background-size: cover;
     background-repeat: no-repeat;
@@ -454,11 +454,6 @@ span.clear { clear: left; display: block; }
 .listing_events h2{
     color: #d70b00;
     font-weight: 600;
-}
-
-#menu a, #menu a>li{
-    text-decoration: none;
-    cursor:pointer;
 }
 
 .menuitem-listing{
