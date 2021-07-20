@@ -160,7 +160,7 @@ function new_excerpt_more($more) {
 	return '...';
 }
 
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', __NAMESPACE__ . '\\new_excerpt_more');
 
 function twentyten_comment( $comment, $args, $depth ) {
 	$GLOBALS ['comment'] = $comment; ?>

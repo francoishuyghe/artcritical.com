@@ -32,7 +32,7 @@ class App extends Controller
     }
 
     public static function get_myauthor_link($name){
-        $base = get_option('siteurl');
+        $base = get_option('url');
         return $base."/author/".$name;
     }
 

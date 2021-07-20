@@ -64,16 +64,20 @@
       }
     }
 
+  }
     @include media-breakpoint-up(md){
-      flex-flow: row;
+      width: auto;
+      
+      ul{
+        flex-flow: row;
 
-      li{
-        color:theme-color(white);
-        font-weight: 300;
+        li{
+          color:theme-color(white);
+          font-weight: 300;
+        }
       }
     }
 
-  }
 }
 
 #submenu{
