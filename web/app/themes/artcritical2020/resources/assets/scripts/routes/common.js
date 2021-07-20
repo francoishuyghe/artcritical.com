@@ -94,36 +94,6 @@ var count = 2;
 function tab_rotate(){
 	feature_tab(count);
 }
-		let menuTimer;
-
-		// main function to handle the mouse events //
-		// $('.ddheader').on('mouseenter', function (e) {
-		// 	var h = $(e.target);
-		// 	var c = $('#' + h.attr('id') + '-ddcontent');
-		// 		if (c.maxh && c.maxh <= c.offsetHeight) { return }
-		// 		else if (!c.maxh) {
-		// 			$('.ddcontent').removeClass('active')
-		// 			c.addClass('active');
-		// 		}
-		// });
-		
-		// $('.ddheader').on('mouseleave', function (e) {
-		// 	console.log('mouse left');
-		// 	var h = $(e.target);
-		// 	var c = $('#' + h.attr('id') + '-ddcontent');
-		// 	menuTimer = setTimeout(function () {
-		// 		c.removeClass('active')
-		// 	}, 10);
-		// });
-  
-		// $('.ddcontent').on('mouseenter mouseleave', function (e) {
-		// 	if (e.type == 'mouseenter') {
-		// 		clearTimeout(menuTimer);
-		// 	} else {
-		// 		console.log($(e.target));
-		// 		$(e.target).closest('.ddcontent').removeClass('active');
-		// 	 }
-		// });
 
   },
   finalize() {

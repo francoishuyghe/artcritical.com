@@ -7,8 +7,13 @@
   z-index: 99;
 
   &.active{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
     #bottommenucontainer{
       display: block;
+      overflow: scroll;
     }
   }
 }
@@ -23,6 +28,7 @@
 
 #menu{ 
   position: relative;
+  width: 100%;
 
   a, a>li{
     text-decoration: none;
@@ -36,18 +42,13 @@
     padding: 0;
     list-style: none;
     
-    @include media-breakpoint-up(md){
-      flex-flow: row;
-    }
-
     li{
       position: relative;
       padding:10px 10px;
       margin-right: 5px;
       text-transform:uppercase;
       line-height: 1em;
-      font-weight: 300;
-      color:theme-color(white);
+      font-weight: 600;
 
       &:hover{
         cursor: pointer;
@@ -62,6 +63,16 @@
         text-decoration:none;
       }
     }
+
+    @include media-breakpoint-up(md){
+      flex-flow: row;
+
+      li{
+        color:theme-color(white);
+        font-weight: 300;
+      }
+    }
+
   }
 }
 
@@ -149,19 +160,11 @@
 }
 
 .ddcontent{
-  display:none;
-  position:absolute; 
-  overflow:hidden; 
-  width:300px; 
   background:#FFFFFF; 
-  bottom: 0;
-  left: 0;
   z-index:200; 
-  opacity:0;
   color:black;
   text-transform:uppercase;
-	box-shadow: 2px 2px 2px #805050;
-  transform: translateY(100%);
+  font-weight: 300;
 
   &.active{
     opacity:1;
@@ -236,7 +239,6 @@
   }
 
   &.tl_dropdown{
-    width:150px; 
     a{
       color:#d70b00;
       &:hover{
@@ -244,4 +246,37 @@
       }
     }
   }
+
+  @include media-breakpoint-up(md){
+    display:none;
+    opacity:0;
+    position:absolute; 
+    width:300px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    box-shadow: 2px 2px 2px #805050;
+    
+    &.tl_dropdown{
+      width:150px; 
+    }
+  }
+}
+
+.color_thelist{color:#d70b00;}
+.color_criticism{color:#b70a00;}
+.color_features{color:#9f0900;}
+.color_artworld{color:#990218}
+.color_departments{color:#8a0700}
+.color_reviewpanel{color:#770600;}
+.color_the-review-panel {color:#f22121;}
+
+@include media-breakpoint-up(md){
+  .color_thelist{background:#d70b00;}
+  .color_criticism{background:#b70a00;}
+  .color_features{background:#9f0900;}
+  .color_artworld{background:#990218}
+  .color_departments{background:#8a0700}
+  .color_reviewpanel{background:#770600;}
+  .color_the-review-panel {background:#f22121;}
 }
