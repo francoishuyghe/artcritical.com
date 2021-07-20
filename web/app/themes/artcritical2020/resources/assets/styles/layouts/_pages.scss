@@ -1,6 +1,138 @@
-.home{
-    #columns{
 
+
+.home{
+    #cover_caption{
+        padding:25px 0;
+    }
+    
+    .cover{
+        width:100px;
+        float:left;
+        padding:10px;
+    }
+
+    #cover{
+        text-align:center;
+        padding-bottom:20px;
+
+        #cover_feature{
+            @extend h3;
+        }
+    }
+    #cover_full{
+        padding-top:10px;
+    }
+
+    #close_cover{
+        display: none; 
+
+        @include media-breakpoint-up(md){
+            display: block;
+        }
+
+        a{
+            font-size:10px; 
+            text-decoration:none; 
+            color:#993333;
+        }
+    }
+
+    #threefeatured{
+        font-family:Arial;
+        
+        #images{
+            position: relative;
+            margin-right:2px;
+            height: 0;
+            padding-top: 56%;
+        }
+
+        .image{
+            width: 100%;
+            height: 0;
+            padding-top: 56%;
+            position: absolute;
+            top: 0;
+        }
+
+        #excerpts{
+            margin-right:2px;
+        }
+
+        .theexcerpt{
+            height:100px;
+            overflow:hidden; 
+            padding:4px;
+            border-left: solid white 5px; 
+            font-size:11px; color:#636161; 
+            border-bottom:#ddd dotted 1px;
+
+            &.selected{
+                border-left: solid #9f3e3e 5px; 
+                background:#f2f2f2;
+            }
+        
+        .title_excerpt{
+            height:90px;
+
+            .title a{
+                font-size:13px; 
+                font-weight:bold; 
+                color:#3d3b3b; 
+                text-decoration:none;
+            
+            &:hover{
+                color:#4e4e4e; 
+            }
+        }
+
+            .author{
+                font-style:italic;
+                color:#888;
+                margin-top:-1px;
+            }
+        }
+
+        .read_more {text-align:right; }
+            a{
+                color:#993333; 
+                font-weight:bold; 
+                text-decoration:none; 
+                font-size:10px;
+
+                &:hover{
+                    color:#882222;
+                }
+            }
+        }
+
+        #cover_info{
+            display: none;
+            
+            @include media-breakpoint-up(md){
+                display: block;
+                background:#dcd3d3;
+                font-size:11px;
+                padding:2px;
+            }
+        }
+
+        #cover_image{
+            text-align:center;
+            padding:6px;
+        }
+
+        #coverdescription{
+            padding:6px;
+            height:290px;
+        }
+
+        #fullimage{
+            text-decoration:none;
+            color:#993333; 
+            position:relative; 
+            left:6px;
+        }
     }
 }
 

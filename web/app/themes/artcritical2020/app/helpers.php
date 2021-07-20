@@ -162,6 +162,7 @@ function get_top3_excerpt(){
 	$words = explode(' ', strip_tags($content));
 	return implode(' ', array_slice($words, 0, 40))."...";
 }
+
 function get_cat_slug($cat_id) {
 	$cat_id = (int) $cat_id;
 	$category = get_category($cat_id);

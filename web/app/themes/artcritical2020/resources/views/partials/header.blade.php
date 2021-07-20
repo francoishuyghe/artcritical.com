@@ -1,116 +1,52 @@
 <header class="banner">
-  <div class="container">
-    <div id="topmenucontainer">
-
-      <div id="logo" style="padding-top:15px;float:left;height:70px"><a href="<?php bloginfo('url')?>"><img src="@asset('images/logo.png')"></a></div>
-
-
-
-
-
-
-
-      <div id="vulture728x90" style="float:right; margin-bottom:10px;margin-top:3px;">
-
-        <?php if (is_home()):?>
-
-
-
-
-
-
-
-
-
-                                             <!-- BANNER AD FOR HOME PAGE -->
-
-
-
-          <script language="JavaScript" type="text/javascript">
-
-          window.dctile = Number(window.dctile) + 1 || 1;
-
-          window.dc_ord = Number(window.dc_ord) || Math.floor(Math.random() * 1E10);
-
-          if (dctile==1) {var vdcopt = 'ist';} else {vdcopt = '';}
-
-          if (17>dctile) document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/nym.vulturenetwork.artcritical/Homepage;dcopt=' + vdcopt + ';tile=' + dctile + ';sz=728x90;ord=' + dc_ord + '?"><\/script>\n');
-
-          </script>
-
-          <noscript><a href="http://ad.doubleclick.net/jump/nym.vulturenetwork.artcritical/Homepage;sz=728x90;ord=123456789?"><img src="http://ad.doubleclick.net/ad/nym.vulturenetwork.artcritical/Homepage;sz=728x90;ord=123456789?" border="0"></a></noscript>
-
-                                         <!-- END BANNER AD FOR HOME PAGE -->
-
-
-
-
-
-
-
-
-
-
-
-        <?php else: ?>
-
-                                        
-
-<!-- BANNER AD FOR INSIDE PAGE -->
-
-
-
-
-
-
-
-          <script language="JavaScript" type="text/javascript">
-
-          window.dctile = Number(window.dctile) + 1 || 1;
-
-          window.dc_ord = Number(window.dc_ord) || Math.floor(Math.random() * 1E10);
-
-          if (dctile==1) {var vdcopt = 'ist';} else {vdcopt = '';}
-
-          if (17>dctile) document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/nym.vulturenetwork.artcritical/ros;dcopt=' + vdcopt + ';tile=' + dctile + ';sz=728x90;ord=' + dc_ord + '?"><\/script>\n');
-
-          </script>
-
-          <noscript><a href="http://ad.doubleclick.net/jump/nym.vulturenetwork.artcritical/ros;sz=728x90;ord=123456789?"><img src="http://ad.doubleclick.net/ad/nym.vulturenetwork.artcritical/ros;sz=728x90;ord=123456789?" border="0"></a></noscript>
-
-                                         
-
-
-
-
-
-
-
-
-
-<!-- END BANNER AD FOR INSIDE PAGE -->
-
-
-
-
-
-
-
-        <?php endif;?>
-
+  <div id="topmenucontainer">
+      <div class="container">
+        <div class="row">
+        <div id="logo" class="col">
+          <a href="<?php bloginfo('url')?>"><img src="@asset('images/logo.png')"></a>
+        </div>
+
+      <div id="hamburgerWrap" class="col">
+        <button class="hamburger hamburger--squeeze" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
-
-      <br style="clear:both">
-
+      <div id="vulture728x90" class="ad-space col">
+        @if(is_home())
+          <!-- BANNER AD FOR HOME PAGE -->
+          <script language="JavaScript" type="text/javascript">
+          window.dctile = Number(window.dctile) + 1 || 1;
+          window.dc_ord = Number(window.dc_ord) || Math.floor(Math.random() * 1E10);
+          if (dctile==1) {var vdcopt = 'ist';} else {vdcopt = '';}
+          if (17>dctile) document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/nym.vulturenetwork.artcritical/Homepage;dcopt=' + vdcopt + ';tile=' + dctile + ';sz=728x90;ord=' + dc_ord + '?"><\/script>\n');
+          </script>
+          <noscript><a href="http://ad.doubleclick.net/jump/nym.vulturenetwork.artcritical/Homepage;sz=728x90;ord=123456789?"><img src="http://ad.doubleclick.net/ad/nym.vulturenetwork.artcritical/Homepage;sz=728x90;ord=123456789?" border="0"></a></noscript>
+          <!-- END BANNER AD FOR HOME PAGE -->
+        @else
+          <!-- BANNER AD FOR INSIDE PAGE -->
+          <script language="JavaScript" type="text/javascript">
+          window.dctile = Number(window.dctile) + 1 || 1;
+          window.dc_ord = Number(window.dc_ord) || Math.floor(Math.random() * 1E10);
+          if (dctile==1) {var vdcopt = 'ist';} else {vdcopt = '';}
+          if (17>dctile) document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/nym.vulturenetwork.artcritical/ros;dcopt=' + vdcopt + ';tile=' + dctile + ';sz=728x90;ord=' + dc_ord + '?"><\/script>\n');
+          </script>
+          <noscript><a href="http://ad.doubleclick.net/jump/nym.vulturenetwork.artcritical/ros;sz=728x90;ord=123456789?"><img src="http://ad.doubleclick.net/ad/nym.vulturenetwork.artcritical/ros;sz=728x90;ord=123456789?" border="0"></a></noscript>
+          <!-- END BANNER AD FOR INSIDE PAGE -->
+        @endif
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div id="bottommenucontainer">
-
-      <?php $options = unserialize(get_option('top_menu_options'));
-      ?>
+  <div id="bottommenucontainer">
+    <div class="container">
+      <div class="row">
+      @php $options = unserialize(get_option('top_menu_options')); @endphp
       <div id="menu">
         <ul>
-                <li class="ddheader color_thelist menuitem-listing" id="thelist">The List</li>
+          <li class="ddheader color_thelist menuitem-listing" id="thelist">The List</li>
           <li class="ddheader color_criticism" id="criticism" >Criticism</li>
           <li class="ddheader color_features" id="features" >Features</li>
           <li class="ddheader color_artworld" id="artworld" >Art World</li>
@@ -121,8 +57,8 @@
         {{-- DROPDOWNS --}}
         <div class="ddcontent tl_dropdown" id="thelist-ddcontent" >
           <a href="https://list.artcritical.com">Week at a Glance</a>
-                <a href="https://list.artcritical.com/current">Current</a>
-                <a href="https://list.artcritical.com/events">Lectures/Events</a>
+          <a href="https://list.artcritical.com/current">Current</a>
+          <a href="https://list.artcritical.com/events">Lectures/Events</a>
         </div>
       
         <div class="ddcontent cr_dropdown" id="criticism-ddcontent">
@@ -196,35 +132,21 @@
             <?php echo $options['next_review_panel_text']?> - <?php echo $options['next_review_panel']?>
           <?= empty($options['next_review_panel_link']) ? '' : '</a>' ;  ?>
         </div>
+        </div>
 
+        <div id="rightSection">
+          <div id="search_follow">
+            {!! get_search_form() !!} 
+          </div>
+
+          <div id="submenu">
+            <h2><a href="<?php bloginfo('url')?>/browse">Archive</a></h2> |  
+            <h2><a href="<?php bloginfo('url')?>/subscribe">Subscribe</a></h2> | 
+            <h2><a href="<?php bloginfo('url')?>/about">About Us</a></h2> | 
+            <h2><a href="<?php bloginfo('url')?>/support">Advertise/Support</a></h2>
+          </div>
+        </div>
       </div>
-
-      <div id="search_follow">
-
-        <?php get_search_form(); ?> 
-
-      </div>
-
-      <br style="clear:both">
-
-      <div id="submenu">
-
-        <h2><a href="<?php bloginfo('url')?>/browse">Archive</a></h2> |  
-
-        <h2><a href="<?php bloginfo('url')?>/subscribe">Subscribe</a></h2> | 
-
-        <h2><a href="<?php bloginfo('url')?>/about">About Us</a></h2> | 
-
-        <h2><a href="<?php bloginfo('url')?>/support">Advertise/Support</a></h2>
-
-      </div>
-
-      <br style="clear:both">
-
     </div>
-
-    <hr>
-
-  </div>
   </div>
 </header>

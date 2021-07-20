@@ -4,7 +4,16 @@
 $theme-colors: (
   primary: #993333,
   criticism: #993333,
+  white: #ffffff,
+  grey: #ccc
 );
+
+.color_thelist{background:#d70b00;}
+.color_criticism{background:#b70a00;}
+.color_features{background:#9f0900;}
+.color_artworld{background:#990218}
+.color_departments{background:#8a0700}
+.color_reviewpanel{background:#770600;}
 
 $grid-gutter: 50px;
 

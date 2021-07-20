@@ -1,12 +1,29 @@
 /** Search form */
 .search-form {
   @extend .form-inline;
+  
+  input[type="search"],
+  input[type="submit"]{
+    border-radius: 0;
+    font-size: .8em;
+  }
+
+  input[type="search"]{
+    flex: 1;
+  }
+
+  input[type="submit"]{
+    background-color: theme-color(primary);
+    border-color: theme-color(primary);
+  }
 }
 
 .search-form label {
   @extend .form-group;
 
   font-weight: normal;
+  margin-bottom: 0;
+  flex: 1;
 }
 
 .search-form .search-field {

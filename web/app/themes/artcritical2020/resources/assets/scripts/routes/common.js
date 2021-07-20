@@ -2,6 +2,12 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
+	//Hamburger Menu
+	$('.hamburger').on('click', function () {
+		$('.banner').toggleClass('active');
+		$(this).toggleClass('is-active');
+	});
+
 var expanded = new Array();
 
 function tag_expand(tag, tagname){
@@ -114,7 +120,7 @@ function tab_rotate(){
 				clearTimeout(menuTimer);
 			} else {
 				console.log($(e.target));
-			$(e.target).closest('.ddcontent').removeClass('active');
+				$(e.target).closest('.ddcontent').removeClass('active');
 			 }
 		});
 

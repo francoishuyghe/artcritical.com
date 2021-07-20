@@ -1,47 +1,143 @@
-.banner .nav li {
-  @extend .nav-item;
+.banner{
+  position: fixed;
+  background: theme-color(white);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  &.active{
+    #bottommenucontainer{
+      display: block;
+    }
+  }
 }
 
-.banner .nav a {
-  @extend .nav-link;
+#rightSection{
+  padding-left: $grid-gutter / 2;
 }
 
-.color_thelist{background:#d70b00;}
-.color_criticism{background:#b70a00;}
-.color_features{background:#9f0900;}
-.color_artworld{background:#990218}
-.color_departments{background:#8a0700}
-.color_reviewpanel{background:#770600;}
+#search_follow{
+  padding-bottom: 5px;
+}
 
 #menu{ 
-  position: relative;;
+  position: relative;
+
+  a, a>li{
+    text-decoration: none;
+    cursor:pointer;
+  }
 
   ul{
-    display:inline;
+    display:flex;
+    flex-flow: column;
     margin: 0;
     padding: 0;
+    list-style: none;
+    
+    @include media-breakpoint-up(md){
+      flex-flow: row;
+    }
 
     li{
-      display:inline;
       padding:10px 10px;
-      font-size:11pt;
+      margin-right: 5px;
       text-transform:uppercase;
-      color:white;
-      line-height:0;
+      line-height: 1em;
       position: relative;
       font-weight: 300;
+      color:theme-color(white);
 
+      &:hover{
+        cursor: pointer;
+      }
+      
       a{
-        color:white;
         text-decoration:none;
       }
     }
   }
 }
 
+#submenu{
+	font-size: 1em;
+  text-align: center;
+
+    a{
+        text-decoration:none;
+        color:inherit;
+    }
+}
+
 #topmenucontainer{
-  height:100px;
-  margin-top:10px;
+  border-bottom: 1px solid theme-color(grey);
+
+  .row{
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #logo{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    img{
+      height: 50px;
+      width: auto;
+    }
+  }
+
+  #hamburgerWrap{
+    flex: 0;
+
+  }
+  
+  .hamburger{
+    &:focus{
+      outline: 0;
+    }
+  }
+
+  .ad-space{
+    display: none;
+  }
+
+  @include media-breakpoint-up(md){
+    border: 0;
+
+    .ad-space{
+      display: block;
+    }
+
+    .hamburger{
+      display: none;
+    }
+  }
+}
+
+#bottommenucontainer{
+  display: none;
+  padding: 10px 0;
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
+
+  @include media-breakpoint-up(md){
+    display: block;
+    margin-top:17px;
+    padding-bottom: 0;
+    box-shadow: none;
+
+    .container{
+      padding-bottom: 5px;
+      border-bottom: 1px solid theme-color(grey);
+    }
+
+    .row{
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
 }
 
 #menucontainer{

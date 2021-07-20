@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
 <?php
   // App\remove_podpress_from_automatic_excerpts();
   global $wp_query; 
