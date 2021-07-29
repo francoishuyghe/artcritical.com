@@ -31,7 +31,7 @@ query_posts($args);
 {{-- Featured Posts --}}
 <div id="threefeatured">
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-8">
 		@if($featured_posts)
 			<div id="images">
 				@foreach($featured_posts as $featutred_post)
@@ -60,7 +60,7 @@ query_posts($args);
 			@endforeach
 		</div>
 	</div>
-	<div class="col-md-3">
+	<div class="col-md-4">
 		<div id="cover_info">
 			<div id="coverdescription">
 				<div id="cover_image" style="background-image: url('{{ $coverpicurl }}')"></div>

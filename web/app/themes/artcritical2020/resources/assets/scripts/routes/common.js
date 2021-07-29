@@ -33,24 +33,27 @@ function tag_expand(tag, tagname){
 	
 }
 
-var prev_id = 'bysubject';
+var prev_id = '#bysubject';
 
-function browse_tab(tab_id){
-	$(tab_id).toggle();
-	$(prev_id).toggle();
-	$(tab_id + "_tab").toggleClassName("selected");
-	$(prev_id + "_tab").toggleClassName("selected");
-	prev_id = tab_id;
-}
+		$('.tab-link').on('click', function (e) {
+			e.preventDefault();
+			let tab_id = '#' + $(e.target).data('tab');
+			$(tab_id).toggle();
+			$(prev_id).toggle();
+			$(tab_id + "_tab").toggleClass("selected");
+			$(prev_id + "_tab").toggleClass("selected");
+			prev_id = tab_id;
+		})
+		
 function relatedsuggested_tab(){
-	$("tab_related").toggleClassName("selected");
-	$("tab_suggested").toggleClassName("selected");
+	$("tab_related").toggleClass("selected");
+	$("tab_suggested").toggleClass("selected");
 	$('related').toggle();
 	$('suggested').toggle();
 }
 function recentsuggested_tab(){
-	$("tab_recent").toggleClassName("selected");
-	$("tab_suggested").toggleClassName("selected");
+	$("tab_recent").toggleClass("selected");
+	$("tab_suggested").toggleClass("selected");
 	$('recent').toggle();
 	$('suggested').toggle();
 }
@@ -63,8 +66,8 @@ function feature_tab_quick(tab_id, url){
 	if(tab_id !== feature_prev_id){
 		if(is_fading == 'false'){
 			is_fading = 'true';
-			$('feature_excerpt_' + tab_id).toggleClassName("selected");
-			$('feature_excerpt_' + feature_prev_id).toggleClassName("selected");
+			$('feature_excerpt_' + tab_id).toggleClass("selected");
+			$('feature_excerpt_' + feature_prev_id).toggleClass("selected");
 			$('feature_image_' + feature_prev_id).fade({ duration: 0.5});
 			$('feature_image_' + tab_id).appear({ 
 				duration: 0.5,

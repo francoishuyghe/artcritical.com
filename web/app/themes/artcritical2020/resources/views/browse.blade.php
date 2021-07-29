@@ -1,24 +1,21 @@
-<?php
-/*
-Template Name: BrowseTest
-*/
+@extends('layouts.app')
+@section('content')
 
-get_header();
+<?php
 $tags = get_tags();
-$tags = array_split($tags, 5);
+$tags = App\array_split($tags, 5);
 isset($_GET['tag_group']) ? $tag_group = $_GET['tag_group'] : $tag_group = 0;
 isset($_GET['tab']) ? $tab = $_GET['tab'] : $tab = 'bysubject';
-//print_r($tags);
 ?>
 	<script>
 	var prev_id = '<?= $tab ?>';
 	</script>
 	<div id="main">
 		<span class="futura">Browse: </span>
-		<span class="futura <?= $tab == 'bysubject' ? 'selected' : ''?>" style="margin-left:20px" id="bysubject_tab"><a href="javascript:browse_tab('bysubject')">By Subject</a></span>
-		<span class="futura <?= $tab == 'byauthor' ? 'selected' : ''?>" style="margin-left:20px" id="byauthor_tab"><a href="javascript:browse_tab('byauthor')">By Author</a></span>
-		<span class="futura <?= $tab == 'bymonth' ? 'selected' : ''?>" style="margin-left:20px" id="bymonth_tab"><a href="javascript:browse_tab('bymonth')">By Month</a></span>
-		<span class="futura <?= $tab == 'cover_archive' ? 'selected' : ''?>" style="margin-left:20px" id="cover_archive_tab"><a href="javascript:browse_tab('cover_archive')">Cover Archive</a></span>
+		<span class="futura <?= $tab == 'bysubject' ? 'selected' : ''?>" style="margin-left:20px" id="bysubject_tab"><a href="#" class="tab-link" data-tab="bysubject">By Subject</a></span>
+		<span class="futura <?= $tab == 'byauthor' ? 'selected' : ''?>" style="margin-left:20px" id="byauthor_tab"><a href="#" class="tab-link" data-tab="byauthor">By Author</a></span>
+		<span class="futura <?= $tab == 'bymonth' ? 'selected' : ''?>" style="margin-left:20px" id="bymonth_tab"><a href="#" class="tab-link" data-tab="bymonth">By Month</a></span>
+		<span class="futura <?= $tab == 'cover_archive' ? 'selected' : ''?>" style="margin-left:20px" id="cover_archive_tab"><a href="#" class="tab-link" data-tab="cover_archive">Cover Archive</a></span>
 		<hr style="background-color:#000">
 		<div id="bysubject" <?= $tab == 'bysubject' ? '' : 'style="display:none"'?>>
 			<div id="tag_menu">
@@ -49,36 +46,33 @@ isset($_GET['tab']) ? $tab = $_GET['tab'] : $tab = 'bysubject';
 			</div>
 		</div>
 		<div id="byauthor" class="archive_list" <?= $tab == 'byauthor' ? '' : 'style="display:none"'?>>
-			<?php //wp_list_authors('format=link');?>
 			<?php
-			$ud = $wpdb->get_results("SELECT * FROM $wpdb->users INNER JOIN $wpdb->usermeta ON ($wpdb->users.ID = $wpdb->usermeta.user_id) WHERE $wpdb->usermeta.meta_key = 'last_name' ORDER BY $wpdb->usermeta.meta_value ASC");
-			foreach($ud as $user){
-				$userdata = get_userdata($user->ID);
-				// print_r($userdata);
+			$ud = get_users();
+			foreach($ud as $userdata){
 				if($userdata->last_name !== ""){
-					if($userdata->wp_capabilities['administrator'] || $userdata->wp_capabilities['regular']){
-						$editors .= "<li><a href=".get_myauthor_link($userdata->user_nicename)."> ".$userdata->first_name." ".$userdata->last_name."</a></li>";
+					if(in_array('administrator', $userdata->roles) || in_array('regular', $userdata->roles)){
+						$editors .= "<li><a href=". App::get_myauthor_link($userdata->user_nicename)."> ".$userdata->first_name." ".$userdata->last_name."</a></li>";
 					}
-					if($userdata->wp_capabilities['guest']){
-						$regulars .= "<li><a href=".get_myauthor_link($userdata->user_nicename)."> ".$userdata->first_name." ".$userdata->last_name."</a></li>";
+					if(in_array('guest', $userdata->roles)){
+						$regulars .= "<li><a href=". App::get_myauthor_link($userdata->user_nicename)."> ".$userdata->first_name." ".$userdata->last_name."</a></li>";
 					}
-					if($userdata->wp_capabilities['past']){
-						$past .= "<li><a href=".get_myauthor_link($userdata->user_nicename)."> ".$userdata->first_name." ".$userdata->last_name."</a></li>";
+					if(in_array('past', $userdata->roles)){
+						$past .= "<li><a href=". App::get_myauthor_link($userdata->user_nicename)."> ".$userdata->first_name." ".$userdata->last_name."</a></li>";
 					}
 				}
 			}
 			?>
 			<div class="author_row">
 				<strong>Regulars</strong>
-				<?php echo $editors?>
+				{!! $editors !!}
 			</div>
 			<div class="author_row">
 				<strong>Guests</strong>
-				<?php echo $regulars?>
+				{!! $regulars !!}
 			</div>
 			<div class="author_row">
 				<strong>Past</strong>
-				<?php echo $past?>
+				{!! $past !!}
 			</div>
 			<br style="clear:both">
 		</div>
@@ -123,6 +117,5 @@ isset($_GET['tab']) ? $tab = $_GET['tab'] : $tab = 'bysubject';
 		</div>
 	</div>
 
-<?php get_sidebar('archive'); ?>
-
-<?php get_footer(); ?>
+	@include('partials.sidebar-browse')
+@endsection
