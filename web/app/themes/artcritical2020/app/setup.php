@@ -505,8 +505,9 @@ add_action( 'widgets_init', function(){
 		'before_title' => '<div class="frontheader"><h2>',
 		'after_title' => '</h2></div>')
 	);
-
+	
 	register_sidebar(array(
+		'name' => 'Front Page / Column 3',
 		'id'            => 'column3',
 		'description' => 'This is to organize the front page column #3 (3rd column from the left).', 
 		'before_widget' => '<div id="%1$s" class="frontwidget %2$s">',
@@ -649,18 +650,26 @@ class categoryWidget extends \WP_Widget {
 class frontCategoryWidget extends \WP_Widget {
     /** constructor */
     function __construct() {
-		$widget_ops = array('description' => 'This widget will display the most recent posts in the category chosen.');
-		parent::__construct(false, __('Front Category'), $widget_ops);
-    }
+		parent::__construct(
+		  
+		// Base ID of your widget
+		'front_category', 
+		  
+		// Widget name will appear in UI
+		__('Front Category', 'wp_widget_domain'), 
+		  
+		// Widget description
+		array( 'description' => __( 'This widget will display the most recent posts in the category chosen.', 'wp_widget_domain' ), ) 
+		);
+	}
 
     /** @see WP_Widget::widget */
     function widget($args, $instance) {	
 		$title = esc_attr($instance['title']);
 		$num_posts = esc_attr($instance['num_posts']);
-		//$suggested = esc_attr($instance['suggested']);
 		$cat = get_cat_ID($title);
-		$color = get_category_parents($cat, FALSE, ".", TRUE);
-		$color = explode(".", $color);
+		$parents = get_category_parents($cat, FALSE, ".", TRUE);
+		$color = is_string($parents) ? explode(".", $parents) : [''];
 		extract( $args );
 		echo $before_widget;
 		echo $before_title . $title. $after_title;
@@ -697,10 +706,10 @@ class frontCategoryWidget extends \WP_Widget {
 	function update($new_instance, $old_instance) {
 		return $new_instance;
 	}
-	function form($instance) {				
+	function form($instance) {
 		$title = $instance ? esc_attr($instance['title']) : '';
 		$titleid = $this->get_field_id('title');
-		$num_posts = $instance ? esc_attr($instance['num_posts']) : '';
+		$num_posts = $instance ? esc_attr($instance['num_posts']) : 1;
 		$suggested = $instance ? esc_attr($instance['suggested']) : '';
 		$allcategories = get_categories();
         ?>
