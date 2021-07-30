@@ -18,9 +18,9 @@ query_posts($args);
         <?php $coverpicurl = get_the_post_thumbnail_url() ?>
 		<?php $coverdescription = App\get_fronttop3_excerpt(55);?>
 
-		<div id="cover" style="display:none">
+		<div id="cover">
 			<div id="cover_feature"><?php the_title();?></div>
-			<div id="close_cover"><a href="javascript:expand_cover();">(close)</a></div>
+			<div id="close_cover"><a>(close)</a></div>
 			<div id="cover_full"><?php the_post_thumbnail();?></div>
 			<div id="cover_caption"><?php the_content(); ?></div>
 			<hr>
@@ -66,7 +66,7 @@ query_posts($args);
 				<div id="cover_image" style="background-image: url('{{ $coverpicurl }}')"></div>
 				{!! nl2br($coverdescription) !!}
 			</div>
-			<a href="javascript:expand_cover();" id="fullimage">View Full Image &#x25B6;</a>
+			<a id="fullimage">View Full Image &#x25B6;</a>
 		</div>
 	</div>
 	</div>

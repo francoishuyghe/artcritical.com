@@ -13,7 +13,13 @@
 
     #cover{
         text-align:center;
-        padding-bottom:20px;
+        overflow: hidden;
+        max-height: 0px;
+        transition: 1.25s;
+
+        &.active{
+            max-height: 900px;
+        }
 
         #cover_feature{
             @extend h3;
@@ -34,6 +40,7 @@
             font-size:10px; 
             text-decoration:none; 
             color:#993333;
+            cursor: pointer;
         }
     }
 
@@ -132,6 +139,7 @@
             color:#993333; 
             position:relative; 
             left:6px;
+            cursor: pointer;
         }
     }
 }

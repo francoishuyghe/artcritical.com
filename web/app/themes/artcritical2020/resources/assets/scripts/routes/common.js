@@ -85,12 +85,6 @@ function feature_tab_quick(tab_id, url){
 function feature_tab_hover(tab_id){
 	$('read_more_' + tab_id).toggle();
 }
-function expand_cover(){
-	Effect.toggle('cover', 'blind', { duration: 0.5 });
-	if(timeoutID){
-		window.clearTimeout(timeoutID);
-	}
-}
 
 var count = 2;
 
