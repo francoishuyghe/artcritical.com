@@ -2,7 +2,7 @@
 
 .home{
     #cover_caption{
-        padding:25px 0;
+        margin-bottom: 10px;
     }
     
     .cover{
@@ -12,17 +12,11 @@
     }
 
     #cover{
-        text-align:center;
-        overflow: hidden;
-        max-height: 0px;
-        transition: 1.25s;
-
-        &.active{
-            max-height: 900px;
-        }
+        margin: $grid-gutter / 2 0;
 
         #cover_feature{
             @extend h3;
+            margin-top: 10px;
         }
     }
     #cover_full{
@@ -45,7 +39,7 @@
     }
 
     #threefeatured{
-        font-family:Arial;
+        padding-bottom: $grid-gutter / 2;
         
         #images{
             position: relative;

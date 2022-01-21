@@ -62,22 +62,15 @@ var prev_id = '#bysubject';
 		window.recentsuggested_tab = recentsuggested_tab;
 
 var feature_prev_id = 1;
-var is_fading = 'false';
 
 		function feature_tab_quick(tab_id, url) {
 
 			if(tab_id !== feature_prev_id){
-				if(is_fading == 'false'){
-					is_fading = 'true';
-					$('feature_excerpt_' + tab_id).toggleClass("selected");
-					$('feature_excerpt_' + feature_prev_id).toggleClass("selected");
-					$('feature_image_' + feature_prev_id).fadeIn({ duration: 0.5});
+					$('#feature_excerpt_' + tab_id).toggleClass("selected");
+					$('#feature_image_' + tab_id).fadeIn();
+					$('#feature_excerpt_' + feature_prev_id).toggleClass("selected");
+					$('#feature_image_' + feature_prev_id).fadeOut();
 					feature_prev_id = tab_id;
-					count = tab_id + 1;
-					if(count == 4){
-						count = 1;
-					}
-				}
 			}
 			
 		}
@@ -85,12 +78,6 @@ var is_fading = 'false';
 		
 function feature_tab_hover(tab_id){
 	$('read_more_' + tab_id).toggle();
-}
-
-var count = 2;
-
-function tab_rotate(){
-	feature_tab(count);
 }
 
   },
