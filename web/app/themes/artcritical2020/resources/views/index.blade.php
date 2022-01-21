@@ -43,7 +43,7 @@ query_posts($args);
 		<div id="excerpts">
 			@foreach($featured_posts as $featured_post)
 			<div class="theexcerpt @if($loop->iteration == 1) selected @endif" id="feature_excerpt_{{ $loop->iteration}}" 
-				onmouseover="feature_tab_quick({{ $loop->iteration}}, '{{ get_the_permalink($featured_post->ID) }}');">
+				onmouseover="window.feature_tab_quick({{ $loop->iteration}}, '{{ get_the_permalink($featured_post->ID) }}');">
 				<div class="title_excerpt">
 					<div class="title">
 						<a href="{{ get_the_permalink($featured_post->ID) }}">{!! get_the_title($featured_post->ID) !!}</a>

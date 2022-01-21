@@ -20,7 +20,7 @@ if($mypage == 0){
 		<div id="user_profile">
 			<h2>{{ $curauth->display_name}}</h2>
 			<div id="user_thumb">{!! get_avatar($curauth) !!}</div>
-			<div id="user_description">{{ nl2br($curauth->description) }}</div>
+			<div id="user_description">{!! nl2br($curauth->description) !!}</div>
 		</div>
 
 		<br style="clear:both">

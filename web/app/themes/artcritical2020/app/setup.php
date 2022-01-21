@@ -787,7 +787,7 @@ class tabWidget extends \WP_Widget {
 		$post->ID = $thepostid;
 		extract( $args ); // extract arguments
 		echo $before_widget;
-		echo $before_title . "<div class=\"selected tab\" id=\"tab_related\" onclick=\"relatedsuggested_tab()\">Related</div> &nbsp; <div class=\" tab\" id=\"tab_suggested\" onclick=\"relatedsuggested_tab()\">Suggested</div>".$after_title;
+		echo $before_title . "<div class=\"selected tab\" id=\"tab_related\" onclick=\"window.relatedsuggested_tab()\">Related</div> &nbsp; <div class=\" tab\" id=\"tab_suggested\" onclick=\"window.relatedsuggested_tab()\">Suggested</div>".$after_title;
 		echo "<hr class=\"color_$categoryparent\">";
 		
 		//related
@@ -845,12 +845,15 @@ class archivetabWidget extends \WP_Widget {
     }
 
     /** @see WP_Widget::widget */
-    function widget($args, $instance) {	
+    public function widget($args, $instance) {	
 		global $category, $categoryparent, $thepostid, $post;
+		if ( is_category() ) {
+			$category = get_queried_object();
+		}
 		$post->ID = $thepostid;
 		extract( $args ); // extract arguments
 		echo $before_widget;
-		echo $before_title . "<div class=\"selected tab\" id=\"tab_recent\" onclick=\"recentsuggested_tab()\">Recent</div> &nbsp; <div class=\" tab\" id=\"tab_suggested\" onclick=\"recentsuggested_tab()\">Suggested</div>".$after_title;
+		echo $before_title . "<div class=\"selected tab\" id=\"tab_recent\" onclick=\"window.recentsuggested_tab()\">Recent</div> &nbsp; <div class=\" tab\" id=\"tab_suggested\" onclick=\"window.recentsuggested_tab()\">Suggested</div>".$after_title;
 		echo "<hr class=\"color_$categoryparent\">";
 		
 		//recent
@@ -926,7 +929,7 @@ class authortabWidget extends \WP_Widget {
 		global $curauth;
 		extract( $args ); // extract arguments
 		echo $before_widget;
-		echo $before_title . "<div class=\"selected tab\" id=\"tab_recent\" onclick=\"recentsuggested_tab()\">Recent</div> &nbsp; <div class=\" tab\" id=\"tab_suggested\" onclick=\"recentsuggested_tab()\">Suggested</div>".$after_title;
+		echo $before_title . "<div class=\"selected tab\" id=\"tab_recent\" onclick=\"window.recentsuggested_tab()\">Recent</div> &nbsp; <div class=\" tab\" id=\"tab_suggested\" onclick=\"window.recentsuggested_tab()\">Suggested</div>".$after_title;
 		echo "<hr class=\"color_$categoryparent\">";
 		
 		//recent

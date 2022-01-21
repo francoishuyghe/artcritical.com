@@ -44,7 +44,7 @@
     <div class="container">
       <div class="row">
       @php $options = unserialize(get_option('top_menu_options')); @endphp
-      <div id="menu">
+      <div id="menu" class="col">
         <ul>
 
           <li class="ddheader color_thelist menuitem-listing" id="thelist">
@@ -163,7 +163,7 @@
         </ul>
         </div>
 
-        <div id="rightSection">
+        <div id="rightSection" class="">
           <div id="search_follow">
             {!! get_search_form() !!} 
           </div>

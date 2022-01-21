@@ -45,43 +45,44 @@ var prev_id = '#bysubject';
 			prev_id = tab_id;
 		})
 		
-function relatedsuggested_tab(){
-	$("tab_related").toggleClass("selected");
-	$("tab_suggested").toggleClass("selected");
-	$('related').toggle();
-	$('suggested').toggle();
-}
-function recentsuggested_tab(){
-	$("tab_recent").toggleClass("selected");
-	$("tab_suggested").toggleClass("selected");
-	$('recent').toggle();
-	$('suggested').toggle();
-}
+		function relatedsuggested_tab(){
+			$("#tab_related").toggleClass("selected");
+			$("#tab_suggested").toggleClass("selected");
+			$('#related').toggle();
+			$('#suggested').toggle();
+		}
+		window.relatedsuggested_tab = relatedsuggested_tab;
+
+		function recentsuggested_tab(){
+			$("#tab_recent").toggleClass("selected");
+			$("#tab_suggested").toggleClass("selected");
+			$('#recent').toggle();
+			$('#suggested').toggle();
+		}
+		window.recentsuggested_tab = recentsuggested_tab;
 
 var feature_prev_id = 1;
 var is_fading = 'false';
 
-function feature_tab_quick(tab_id, url){
+		function feature_tab_quick(tab_id, url) {
 
-	if(tab_id !== feature_prev_id){
-		if(is_fading == 'false'){
-			is_fading = 'true';
-			$('feature_excerpt_' + tab_id).toggleClass("selected");
-			$('feature_excerpt_' + feature_prev_id).toggleClass("selected");
-			$('feature_image_' + feature_prev_id).fade({ duration: 0.5});
-			$('feature_image_' + tab_id).appear({ 
-				duration: 0.5,
-				afterFinish: function () {is_fading = 'false'}
-			});
-			feature_prev_id = tab_id;
-			count = tab_id + 1;
-			if(count == 4){
-				count = 1;
+			if(tab_id !== feature_prev_id){
+				if(is_fading == 'false'){
+					is_fading = 'true';
+					$('feature_excerpt_' + tab_id).toggleClass("selected");
+					$('feature_excerpt_' + feature_prev_id).toggleClass("selected");
+					$('feature_image_' + feature_prev_id).fadeIn({ duration: 0.5});
+					feature_prev_id = tab_id;
+					count = tab_id + 1;
+					if(count == 4){
+						count = 1;
+					}
+				}
 			}
+			
 		}
-	}
-	
-}
+		window.feature_tab_quick = feature_tab_quick;
+		
 function feature_tab_hover(tab_id){
 	$('read_more_' + tab_id).toggle();
 }
