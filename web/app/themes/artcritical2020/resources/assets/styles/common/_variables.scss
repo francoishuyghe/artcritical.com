@@ -2,10 +2,13 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
+  black: #000000,
   primary: #993333,
   criticism: #993333,
   white: #ffffff,
-  grey: #ccc
+  grey: #ccc,
+  darkgrey: #838383,
+  lightgrey: #ddd,
 );
 
 $grid-gutter: 50px;

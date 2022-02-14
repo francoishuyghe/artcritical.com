@@ -690,7 +690,7 @@ class frontCategoryWidget extends \WP_Widget {
 			?>
 			<div class="smallpost">
 				<div class="thumb">
-					<?php the_post_thumbnail('thumbnail'); ?>
+					<?php the_post_thumbnail('medium'); ?>
 				</div>
 				<div class="snippet">
 					<div class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>

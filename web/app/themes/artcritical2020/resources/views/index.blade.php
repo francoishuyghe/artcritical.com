@@ -9,18 +9,18 @@
 <div id="threefeatured">
 	<div class="row">
 		@if($featured_posts)
-		<div class="col-md-6">
+		<div class="col-md-5">
 			<div id="images">
 				@foreach($featured_posts as $post)
 				@php setup_postdata($post) @endphp
 				<div class="image" 
 				id="feature_image_{{ $loop->iteration }}" 
-				style="background:url(<?php echo App::postimage('featured_front'); ?>) center center;"></div>
+				style="background-image:url(<?php echo App::postimage('featured_front'); ?>);"></div>
 				@php wp_reset_postdata() @endphp
 				@endforeach
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-7">
 		<div id="excerpts">
 			@foreach($featured_posts as $featured_post)
 			<div class="theexcerpt @if($loop->iteration == 1) selected @endif" id="feature_excerpt_{{ $loop->iteration}}" 
@@ -68,10 +68,10 @@ query_posts($args);
 
 		<div id="cover">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-5">
 					<div id="cover_full"><?php the_post_thumbnail();?></div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-7">
 					<div id="cover_feature"><?php the_title();?></div>
 					<div id="cover_caption"><?php the_content(); ?></div>
 				</div>
@@ -86,13 +86,13 @@ query_posts($args);
 {{-- Columns --}}
 <div id="columns">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-lg-4">
 			<?php dynamic_sidebar('column1'); ?>
 		</div>
-		<div class="col-md-4">
+		<div class="col-lg-4">
 			<?php dynamic_sidebar('column2'); ?>
 		</div>
-		<div class="col-md-4">
+		<div class="col-lg-4">
 			<?php dynamic_sidebar('column3'); ?>
 		</div>
 	</div>
